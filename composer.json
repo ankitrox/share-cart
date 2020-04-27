@@ -1,0 +1,22 @@
+{
+    "name": "agade/woo-save-share-cart",
+    "description": "Save and share cart for WooCommerce.",
+    "type": "plugin",
+    "require-dev": {
+        "phpunit/phpunit": "^7",
+        "wp-coding-standards/wpcs": "2.1.1",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ankit\\WCSSC\\": "Includes"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ankit Gade",
+            "email": "contact@sharethingz.com"
+        }
+    ]
+}
