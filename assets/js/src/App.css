@@ -1,0 +1,15 @@
+.wcssc-icons-container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.wcssc-icons-container > div {
+  font-size: 2.3em;
+  text-align: center;
+  margin-bottom: 15px;
+  width: 33.3%;
+}
+
+.wcssc-captcha {
+  text-align: center;
+}

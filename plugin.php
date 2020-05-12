@@ -21,6 +21,8 @@ if( ! defined( 'ABSPATH' ) ) {
 define( 'WCSSC_BASE', dirname(__FILE__) );
 define( 'WCSSC_BASE_FILE', __FILE__ );
 define( 'WCSSC_BASE_URL', plugins_url( basename( dirname(__FILE__) ) ) );
+define( 'WCSSC_ASSETS_BUILD', WCSSC_BASE_URL . '/assets/js/build' );
+define( 'WCSSC_ASSET_MANIFEST', WCSSC_BASE . '/assets/js/build/asset-manifest.json' );
 
 require WCSSC_BASE . '/vendor/autoload.php';
 

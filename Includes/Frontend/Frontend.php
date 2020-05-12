@@ -9,7 +9,7 @@
 namespace Ankit\WCSSC\Frontend;
 
 use Ankit\WCSSC\Admin\Admin;
-use Ankit\WCSSC\Admin\Settings;
+use Ankit\WCSSC\Settings;
 
 /**
  * Class Frontend
@@ -22,13 +22,21 @@ class Frontend {
 	 *
 	 * @var Settings Ankit\WCSSC\Admin\Settings
 	 */
-	private $admin;
+	private $settings;
+
+	/**
+	 * Enqueue object.
+	 *
+	 * @var Enqueue
+	 */
+	private $enqueue;
 
 	/**
 	 * Frontend constructor.
 	 */
-	public function __construct( Admin $admin ) {
-		$this->admin = $admin;
+	public function __construct( Settings $settings ) {
+		$this->settings = $settings;
+		$this->enqueue  = new Enqueue( $this->settings );
 		$this->hooks();
 	}
 

@@ -45,7 +45,8 @@ class SaveShareCart {
 	 */
 	public function __construct() {
 		$this->admin = new Admin();
-		$this->frontend = new Frontend( $this->admin );
+		$this->seetings = new Settings();
+		$this->frontend = new Frontend( $this->seetings );
 		$this->hooks();
 	}
 
