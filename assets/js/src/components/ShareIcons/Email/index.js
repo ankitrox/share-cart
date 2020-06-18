@@ -1,10 +1,10 @@
 import React from 'react';
 
-function EmailIcon( { link } ) {
+function EmailIcon( { onClick } ) {
 
   return (
     <div>
-      <a target="_blank" href={link}>
+      <a href="#" onClick={ onClick } title="Email">
         <i class="fas fa-envelope"></i>
       </a>
     </div>

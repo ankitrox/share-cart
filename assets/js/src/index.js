@@ -5,10 +5,16 @@ import ShareButton from './components/Containers/ShareButton';
 import domready from '@wordpress/dom-ready';
 import rootReducer from './store/reducers';
 import Style from './App.css';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux'
+import thunkMiddleware from 'redux-thunk'
 
-const store = createStore(rootReducer);
+const store = createStore(
+  rootReducer,
+  applyMiddleware(
+    thunkMiddleware
+  )
+);
 
 function RenderShareButton() {
   const target = document.getElementById('wcssc-button-container');
@@ -25,4 +31,4 @@ function RenderShareButton() {
 
 domready(() => { RenderShareButton(); })
 
-//window.jQuery( document.body ).bind( 'updated_wc_div', RenderShareButton );
+window.jQuery( document.body ).bind( 'updated_wc_div', RenderShareButton );

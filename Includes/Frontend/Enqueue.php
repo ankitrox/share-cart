@@ -5,7 +5,7 @@
 
 namespace Ankit\WCSSC\Frontend;
 
-use Ankit\WCSSC\Settings;
+use Ankit\WCSSC\Utility\Utility;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -16,17 +16,19 @@ defined( 'ABSPATH' ) || exit;
  */
 class Enqueue {
 	/**
-	 * Settings object.
+	 * Utility object.
 	 *
-	 * @var Settings
+	 * @var Utility
 	 */
-	private $settings;
+	private $util;
 
 	/**
 	 * Enqueue constructor.
+	 *
+	 * @param Utility $utility
 	 */
-	public function __construct( Settings $settings ) {
-		$this->settings = $settings;
+	public function __construct( Utility $utility ) {
+		$this->util = $utility;
 		$this->hooks();
 	}
 
@@ -60,8 +62,13 @@ class Enqueue {
 	 * We will use asset-manifest.json to load the js/css files.
 	 */
 	public function load_scripts() {
-		$settings            = [];
-		$settings['socials'] = $this->settings->active_social_medias();
+		$settings                           = [];
+		$settings['socials']                = $this->util->plugin()->settings()->active_social_medias();
+		$settings['nonce']                  = is_user_logged_in() ? wp_create_nonce( 'wp_rest' ) : '';
+		$settings['wcssc_nonce']            = wp_create_nonce( 'wcssc_api' );
+		$settings['api_path']['get_link']   = home_url( rest_get_url_prefix() . '/wcssc/v1/get-link' );
+		$settings['api_path']['save_cart']  = home_url( rest_get_url_prefix() . '/wcssc/v1/save-cart' );
+		$settings['api_path']['email_cart'] = home_url( rest_get_url_prefix() . '/wcssc/v1/email-cart' );
 
 		/**
 		 * Enqueue font awesome script
@@ -77,7 +84,7 @@ class Enqueue {
 			wp_enqueue_style( 'wcssc', WCSSC_ASSETS_BUILD . $asset_manifest[ 'main.css' ] );
 		}
 
-		wp_enqueue_script( 'wcssc-runtime', WCSSC_ASSETS_BUILD . $asset_manifest[ 'runtime-main.js' ], [], null, true );
+		wp_enqueue_script( 'wcssc-runtime', WCSSC_ASSETS_BUILD . $asset_manifest[ 'runtime-main.js' ], [ 'wp-data', 'wp-core-data' ], null, true );
 		wp_enqueue_script( 'wcssc-main', WCSSC_ASSETS_BUILD . $asset_manifest[ 'main.js' ], ['wcssc-runtime'], null, true );
 
 		wp_localize_script( 'wcssc-main', 'wcssc_settings', $settings );

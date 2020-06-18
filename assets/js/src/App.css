@@ -13,3 +13,64 @@
 .wcssc-captcha {
   text-align: center;
 }
+
+.wcssc-captcha > p {
+  margin: 3px 0;
+}
+
+.wcssc-captcha > div {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.wcssc-notice {
+  display: block;
+  text-align: center;
+  margin: 10px 0;
+  background: #81d981;
+  color: #333;
+  padding: 3px;
+  border: 1px solid #AAA;
+  border-radius: 3px;
+}
+
+.wcssc-notice.sucess {
+  background: #81d981;
+  color: #333;
+}
+
+.wcssc-notice.error {
+  background: #cf416c;
+  color: #FFF;
+}
+
+.wcssc-form-row {
+  margin-bottom: 20px;
+}
+
+.wcssc-form-row label, .wcssc-form-row input[type="text"], .wcssc-form-row textarea {
+  display: block;
+  margin: 3px 0;
+  width: 90%;
+}
+
+.wcssc-form-row button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-right: 1em;
+  background: #cfcfcf;
+  color: #333;
+}
+
+.wcssc-form-row button[type="submit"] {
+  background: #c4438d;
+  color: #FFF;
+}
+
+@keyframes shake {
+  0% { margin-left: 0rem; }
+  25% { margin-left: 0.5rem; }
+  75% { margin-left: -0.5rem; }
+  100% { margin-left: 0rem; }
+}

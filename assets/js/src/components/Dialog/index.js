@@ -1,18 +1,18 @@
 import React from 'react';
 import Modal from 'react-bootstrap/Modal';
-import {ReactComponent as Loader} from '../../../src/media/loader.svg';
+import ModalContent from '../../components/ModalContent';
 
 function Dialog( props ) {
-  const { cartlink, ...rest } = props;
-  const Container = ( '' === cartlink ) ? <Loader /> : <Loader />;
+  const { verified, notice, classname, frame, ...rest } = props;
+  const Container = <ModalContent screen={frame} />
 
   return (
     <Modal {...rest}>
       <Modal.Header closeButton>
-      <Modal.Title centered>Share Cart</Modal.Title>
       </Modal.Header>
-      <Modal.Body>
+      <Modal.Body closeButton>
         { Container }
+        {notice && 	<div class={ "wcssc-notice " + classname }>{notice}</div>}
       </Modal.Body>
     </Modal>
   );

@@ -7,10 +7,15 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "@wordpress/api-fetch": "^3.13.1",
+    "@wordpress/core-data": "^2.16.0",
     "@wordpress/dom-ready": "^2.9.0",
     "@wordpress/i18n": "^3.12.0",
+    "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
+    "copy-to-clipboard": "^3.3.1",
+    "formik": "^2.1.4",
     "js-cookie": "^2.2.1",
+    "mobile-device-detect": "^0.3.3",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.1",
@@ -19,7 +24,8 @@
     "react-responsive-modal": "^5.0.2",
     "react-scripts": "3.4.1",
     "redux": "^4.0.5",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "yup": "^0.29.1"
   },
   "scripts": {
     "start": "react-scripts start",

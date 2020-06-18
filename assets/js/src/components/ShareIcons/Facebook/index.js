@@ -4,7 +4,7 @@ function FacebookIcon( { link } ) {
 
   return (
     <div>
-      <a target="_blank" href={link}>
+      <a target="_blank" href={ "https://www.facebook.com/sharer.php?u=" + encodeURIComponent( link ) }>
         <i class="fab fa-facebook"></i>
       </a>
     </div>

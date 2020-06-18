@@ -91,4 +91,29 @@ class Settings {
 		return $this->configs['active_social_media'] = $media;
 	}
 
+	/**
+	 * Get settings for particular section.
+	 * Example: General, Email and Save cart.
+	 *
+	 * @param string $section Name of section to retrieve.
+	 *
+	 * @return array
+	 */
+	public function section( string $section = null ) {
+		$settings = [];
+
+		if ( ! $section ) {
+			return $settings;
+		}
+
+		foreach ( $this->types as $type ) {
+			if ( $section === $type->get_name() ) {
+				$fields   = wp_list_pluck( $type->get_fields(), 'id' );
+				$settings = array_intersect_key( $this->configs, array_flip( $fields ) );
+			}
+		}
+
+		return $settings;
+	}
+
 }

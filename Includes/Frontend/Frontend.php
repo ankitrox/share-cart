@@ -8,8 +8,8 @@
 
 namespace Ankit\WCSSC\Frontend;
 
-use Ankit\WCSSC\Admin\Admin;
 use Ankit\WCSSC\Settings;
+use Ankit\WCSSC\Utility\Utility;
 
 /**
  * Class Frontend
@@ -22,7 +22,7 @@ class Frontend {
 	 *
 	 * @var Settings Ankit\WCSSC\Admin\Settings
 	 */
-	private $settings;
+	private $util;
 
 	/**
 	 * Enqueue object.
@@ -33,10 +33,12 @@ class Frontend {
 
 	/**
 	 * Frontend constructor.
+	 *
+	 * @param Utility $util
 	 */
-	public function __construct( Settings $settings ) {
-		$this->settings = $settings;
-		$this->enqueue  = new Enqueue( $this->settings );
+	public function __construct( Utility $util ) {
+		$this->util = $util;
+		$this->enqueue  = new Enqueue( $this->util );
 		$this->hooks();
 	}
 

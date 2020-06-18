@@ -1,10 +1,10 @@
 import React from 'react';
 
-function ClipIcon( { link } ) {
+function ClipIcon( { onClick } ) {
 
   return (
     <div>
-      <a target="_blank" href={link}>
+      <a href="#" onClick={ onClick }>
         <i class="fas fa-copy"></i>
       </a>
     </div>

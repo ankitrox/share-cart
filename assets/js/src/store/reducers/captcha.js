@@ -6,6 +6,7 @@ const captcha = ( state = { captchaOK: false }, action ) => {
     return {
       captchaOK: true
     }
+
     case 'INVALIDATE':
     return {
       captchaOK: false
