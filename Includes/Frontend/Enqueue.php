@@ -62,13 +62,15 @@ class Enqueue {
 	 * We will use asset-manifest.json to load the js/css files.
 	 */
 	public function load_scripts() {
-		$settings                           = [];
-		$settings['socials']                = $this->util->plugin()->settings()->active_social_medias();
-		$settings['nonce']                  = is_user_logged_in() ? wp_create_nonce( 'wp_rest' ) : '';
-		$settings['wcssc_nonce']            = wp_create_nonce( 'wcssc_api' );
-		$settings['api_path']['get_link']   = home_url( rest_get_url_prefix() . '/wcssc/v1/get-link' );
-		$settings['api_path']['save_cart']  = home_url( rest_get_url_prefix() . '/wcssc/v1/save-cart' );
-		$settings['api_path']['email_cart'] = home_url( rest_get_url_prefix() . '/wcssc/v1/email-cart' );
+		$settings                            = [];
+		$settings['socials']                 = $this->util->plugin()->settings()->active_social_medias();
+		$settings['nonce']                   = is_user_logged_in() ? wp_create_nonce( 'wp_rest' ) : '';
+		$settings['wcssc_nonce']             = wp_create_nonce( 'wcssc_api' );
+		$settings['api_path']['get_link']    = home_url( rest_get_url_prefix() . '/wcssc/v1/get-link' );
+		$settings['api_path']['save_cart']   = home_url( rest_get_url_prefix() . '/wcssc/v1/save-cart' );
+		$settings['api_path']['email_cart']  = home_url( rest_get_url_prefix() . '/wcssc/v1/email-cart' );
+		$settings['api_path']['saved_carts'] = home_url( rest_get_url_prefix() . '/wp/v2/wcssc-cart/' );
+		$settings['api_path']['delete_cart'] = home_url( rest_get_url_prefix() . '/wp/v2/wcssc-cart/{id}' );
 
 		/**
 		 * Enqueue font awesome script

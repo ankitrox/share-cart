@@ -147,6 +147,7 @@ class SaveShareCart {
 			'hierarchical' => false,
 			'menu_position' => null,
 			'show_in_rest' => true,
+			'rest_controller_class' => 'Ankit\WCSSC\API\Controllers\SavedCarts_Controller',
 			'supports' => apply_filters( 'wcssc_post_type_supports', array(
 				'title',
 				'author',

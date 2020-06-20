@@ -2,6 +2,7 @@ import React from 'react';
 import { render } from 'react-dom'
 import 'bootstrap/dist/css/bootstrap.css';
 import ShareButton from './components/Containers/ShareButton';
+import SavedCarts from './components/SavedCarts';
 import domready from '@wordpress/dom-ready';
 import rootReducer from './store/reducers';
 import Style from './App.css';
@@ -18,7 +19,11 @@ const store = createStore(
 
 function RenderShareButton() {
   const target = document.getElementById('wcssc-button-container');
+  const saved_carts_element = document.getElementById('saved-carts-table');
 
+  /**
+   * Mount the shared cart button.
+   */
   if( target ) {
     render(
       <Provider store={store}>
@@ -27,6 +32,17 @@ function RenderShareButton() {
       target
     );
   }
+
+  /**
+   * Mount the saved carts from current user.
+   */
+  if( saved_carts_element ) {
+    render(
+      <SavedCarts />,
+      saved_carts_element
+    );
+  }
+
 };
 
 domready(() => { RenderShareButton(); })

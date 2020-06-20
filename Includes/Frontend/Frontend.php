@@ -32,13 +32,21 @@ class Frontend {
 	private $enqueue;
 
 	/**
+	 * Rewrite object.
+	 * 
+	 * @var Rewrite
+	 */
+	private $rewrite;
+
+	/**
 	 * Frontend constructor.
 	 *
 	 * @param Utility $util
 	 */
 	public function __construct( Utility $util ) {
-		$this->util = $util;
-		$this->enqueue  = new Enqueue( $this->util );
+		$this->util    = $util;
+		$this->enqueue = new Enqueue( $this->util );
+		$this->rewrite = new Rewrite();
 		$this->hooks();
 	}
 
@@ -46,6 +54,7 @@ class Frontend {
 	 * Add necessary hooks.
 	 */
 	public function hooks() {
+		add_action( 'woocommerce_account_menu_items', [ $this, 'menu_items' ] );
 		add_action( $this->get_button_position(), [ $this, 'render_button' ] );
 	}
 
@@ -65,5 +74,27 @@ class Frontend {
 	 */
 	public function get_button_position() {
 		return get_option( 'wc_wcssc_button_pos', 'woocommerce_after_cart_table' );
+	}
+
+	/**
+	 * Add new item to `My account` navigation list.
+	 *
+	 * @param array $items List of menu items.
+	 *
+	 * @return array
+	 */
+	public function menu_items( array $items ) {
+		if ( ! empty( $items['customer-logout'] ) ) {
+			$logout_text = $items['customer-logout'];
+			unset( $items['customer-logout'] );
+		}
+
+		$items['saved-carts']     = __( 'Saved carts', 'wcssc' );
+
+		if( $logout_text ) {
+			$items['customer-logout'] = $logout_text;
+		}
+
+		return $items;
 	}
 }

@@ -68,9 +68,39 @@
   color: #FFF;
 }
 
-@keyframes shake {
-  0% { margin-left: 0rem; }
-  25% { margin-left: 0.5rem; }
-  75% { margin-left: -0.5rem; }
-  100% { margin-left: 0rem; }
+.cart-row-heading {
+  font-weight: 700;
+  font-size: 1.2em;
+}
+
+.cartremove svg {
+  cursor: pointer;
+}
+
+.cart-row, .cart-row-remove {
+  border-bottom: 1px solid #CCC;
+  padding: 5px 0;
+  display: flex;
+}
+
+.cart-row-remove {
+  display: block;
+  text-align: center;
+}
+
+.cart-row-remove button {
+  margin-right: 20px;
+}
+
+.cart-row-remove button.remove-cart {
+  background: #fe5151;
+  color: #FFF;
+}
+
+.cartname {
+  flex-grow: 3;
+}
+
+.cartname > a, .cartname > a:hover {
+  text-decoration: none;
 }

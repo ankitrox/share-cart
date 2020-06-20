@@ -14,6 +14,7 @@ use Ankit\WCSSC\Endpoint\EmailCart;
 use Ankit\WCSSC\Endpoint\GetLink;
 use Ankit\WCSSC\Endpoint\SaveCart;
 use Ankit\WCSSC\Utility\Utility;
+use WP_REST_Request;
 
 /**
  * Class API_Manager
@@ -54,6 +55,7 @@ class API_Manager {
 	}
 
 	private function hooks() {
+		add_filter( 'rest_wcssc-cart_query', [ $this, 'rest_query' ] );
 		add_action( 'rest_api_init', [ $this, 'register_endpoints' ] );
 	}
 
@@ -71,4 +73,22 @@ class API_Manager {
 		}
 	}
 
+	/**
+	 * Filter query args for REST.
+	 *
+	 * @param array $args
+	 *
+	 * @return array
+	 */
+	public function rest_query( array $args ) {
+		/**
+		 * For saved carts display API request.
+		 */
+		if ( ! empty( $_REQUEST['nonce'] ) && wp_verify_nonce( $_REQUEST['nonce'], 'wcssc_api' ) ) {
+			$args['author'] = get_current_user_id();
+			$args['status'] = 'publish';
+		}
+
+		return $args;
+	}
 }
