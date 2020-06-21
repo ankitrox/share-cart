@@ -3,6 +3,10 @@
   flex-flow: row wrap;
 }
 
+.wcssc-icons-container a {
+  outline: none;
+}
+
 .wcssc-icons-container > div {
   font-size: 2.3em;
   text-align: center;
@@ -79,7 +83,7 @@
 
 .cart-row, .cart-row-remove {
   border-bottom: 1px solid #CCC;
-  padding: 5px 0;
+  padding: 10px 0;
   display: flex;
 }
 

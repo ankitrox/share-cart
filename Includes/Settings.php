@@ -42,6 +42,21 @@ class Settings {
 	}
 
 	/**
+	 * Get a particular setting.
+	 *
+	 * @param $setting
+	 *
+	 * @return mixed|false
+	 */
+	public function get( string $setting ) {
+		if( ! $setting || ! isset( $this->configs[$setting] ) ) {
+			return false;
+		}
+
+		return $this->configs[$setting];
+	}
+
+	/**
 	 * Fetches the settings value for plugin options.
 	 */
 	private function prepare_settings() {

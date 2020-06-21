@@ -3,12 +3,14 @@ import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
 import { ReactComponent as Loader } from '../../media/loader.svg'
 
+const { __ } = window.wp.i18n;
+
 export default function EmailForm ( props ) {
   const { onBack, onSubmit } = props;
 
   return(
     <>
-    <h3>Email Cart</h3>
+    <h3> { __('Email Cart', 'wcssc') } </h3>
   <Formik
   initialValues={{
     emailTo: '',
@@ -17,10 +19,10 @@ export default function EmailForm ( props ) {
 
   validationSchema={Yup.object({
       emailTo: Yup.string()
-        .max(50, 'Must be 50 characters or less')
-        .required('Required'),
+        .max(50,  __( 'Must be 50 characters or less', 'wcssc' ) )
+        .required( __( 'Required', 'wcssc' ) ),
       emailTitle: Yup.string()
-        .required('Required')
+        .required( __( 'Required', 'wcssc' ) )
     })}
 
     onSubmit={ onSubmit }
@@ -34,18 +36,18 @@ export default function EmailForm ( props ) {
     return (
       <Form>
         <div className="wcssc-form-row">
-        <label htmlFor="emailTo">Email address</label>
-        <Field name="emailTo" type="text" autocomplete="off" onBlur={ props } placeholder="Email to whom you want to send cart" />
+        <label htmlFor="emailTo"> { __('Email address', 'wcssc') } </label>
+        <Field name="emailTo" type="text" autocomplete="off" onBlur={ props } placeholder={ __('Email to whom you want to send cart', 'wcssc') } />
         </div>
 
         <div className="wcssc-form-row">
-          <label htmlFor="emailTitle">Email Title</label>
-          <Field name="emailTitle" type="text" autocomplete="off" onBlur={ props } placeholder="Title of email" />
+          <label htmlFor="emailTitle"> { __('Email Title', 'wcssc') } </label>
+          <Field name="emailTitle" type="text" autocomplete="off" onBlur={ props } placeholder={ __( 'Email subject', 'wcssc' ) } />
         </div>
 
         <div className="wcssc-form-row">
-          <button onClick={ onBack }>Back</button>
-          <button type="submit">Submit</button>
+          <button onClick={ onBack }>{ __('Back', 'wcssc') }</button>
+          <button type="submit"> { __( 'Submit', 'wcssc' ) } </button>
           {isSubmitting && <span className="form-spinner"><Loader /></span>}
         </div>
       </Form>

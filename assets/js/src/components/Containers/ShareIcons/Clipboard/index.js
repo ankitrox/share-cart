@@ -3,6 +3,8 @@ import ClipIcon from '../../../ShareIcons/Clipboard';
 import { setnotice } from '../../../../store/actions/dialog'
 import copy from 'copy-to-clipboard';
 
+const { __ } = window.wp.i18n;
+
 const mapStateToProps = ( state ) => ({
   link: state.button.cartlink,
 });
@@ -14,7 +16,7 @@ const mapDispatchToProps = (dispatch) => ({
       setnotice(
         {
           classname: 'success',
-          message: "Cart link copied to clipboard"
+          message: __( 'Cart link copied to clipboard', 'wcssc' )
         }
       )
     )

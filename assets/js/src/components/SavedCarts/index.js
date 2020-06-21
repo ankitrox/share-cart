@@ -3,6 +3,8 @@ import axios from 'axios';
 import SavedCart from './SavedCart';
 import { ReactComponent as Loader } from '../../media/loader.svg'
 
+const { __ } = window.wp.i18n;
+
 export default function SavedCarts( props ) {
     const [ carts, setCarts ] = useState([]);
     const [ isFetching, setFetching ] = useState( false );
@@ -55,8 +57,8 @@ export default function SavedCarts( props ) {
             return (
                 <>
                     <div key="carthead" className="cart-row-heading cart-row">
-                        <div className="cartname cartrow-item">Cart Name</div>
-                        <div className="cartremove cartrow-item">Remove Cart</div>
+                        <div className="cartname cartrow-item">{ __( 'Cart Name', 'wcssc' ) }</div>
+                        <div className="cartremove cartrow-item"> { __( 'Remove Cart', 'wcssc' ) } </div>
                     </div>
 
                     { CartRows }
@@ -65,7 +67,7 @@ export default function SavedCarts( props ) {
         }else if( isFetching ) {
             return <span className="form-spinner"><Loader /></span>
         }else {
-            return <div>There are no saved carts to display.</div>
+            return <div>{ __( 'There are no saved carts to display.', 'wcssc' ) }</div>
         }
     }
 

@@ -66,6 +66,7 @@ class Enqueue {
 		$settings['socials']                 = $this->util->plugin()->settings()->active_social_medias();
 		$settings['nonce']                   = is_user_logged_in() ? wp_create_nonce( 'wp_rest' ) : '';
 		$settings['wcssc_nonce']             = wp_create_nonce( 'wcssc_api' );
+		$settings['wcssc_captcha_key']       = $this->util->plugin()->settings()->get( 'wcssc_captcha_key' );
 		$settings['api_path']['get_link']    = home_url( rest_get_url_prefix() . '/wcssc/v1/get-link' );
 		$settings['api_path']['save_cart']   = home_url( rest_get_url_prefix() . '/wcssc/v1/save-cart' );
 		$settings['api_path']['email_cart']  = home_url( rest_get_url_prefix() . '/wcssc/v1/email-cart' );
@@ -86,8 +87,9 @@ class Enqueue {
 			wp_enqueue_style( 'wcssc', WCSSC_ASSETS_BUILD . $asset_manifest[ 'main.css' ] );
 		}
 
-		wp_enqueue_script( 'wcssc-runtime', WCSSC_ASSETS_BUILD . $asset_manifest[ 'runtime-main.js' ], [ 'wp-data', 'wp-core-data' ], null, true );
+		wp_enqueue_script( 'wcssc-runtime', WCSSC_ASSETS_BUILD . $asset_manifest[ 'runtime-main.js' ], [ 'wp-data', 'wp-core-data', 'wp-i18n' ], null, true );
 		wp_enqueue_script( 'wcssc-main', WCSSC_ASSETS_BUILD . $asset_manifest[ 'main.js' ], ['wcssc-runtime'], null, true );
+		wp_set_script_translations( 'wcssc-main', 'wcssc' );
 
 		wp_localize_script( 'wcssc-main', 'wcssc_settings', $settings );
 

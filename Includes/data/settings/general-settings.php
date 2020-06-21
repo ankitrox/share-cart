@@ -114,11 +114,10 @@ return apply_filters( 'wcssc_settings_fields_general', array(
 	),
 
 	array(
-		'name'     => __( 'Data persistence time', 'wcssc' ),
-		'type'     => 'number',
-		'desc'     => __( 'Enter days for which shared cart data will persist in database.', 'wcssc' ),
-		'desc_tip' => __( 'This would help to clean up the old data and keep the database size minimum.', 'wcssc' ),
-		'id'       => 'wcssc_ip_interval'
+		'name'    => __( 'Captcha key', 'wcssc' ),
+		'type'    => 'text',
+		'default' => '',
+		'id'      => 'wcssc_captcha_key'
 	),
 
 	array(
