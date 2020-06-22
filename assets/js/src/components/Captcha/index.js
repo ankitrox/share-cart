@@ -3,6 +3,7 @@ import ReCAPTCHA from 'react-google-recaptcha'
 import { ReactComponent as Loader } from '../../media/loader.svg'
 
 const { __ } = window.wp.i18n;
+const CaptchaKey = window.wcssc_settings.wcssc_captcha_key;
 
 function Captcha({ onSuccess, Invalidate, fetching }) {
 
@@ -11,7 +12,7 @@ function Captcha({ onSuccess, Invalidate, fetching }) {
       <div className="wcssc-captcha">
         <h4> { __( 'We love humans!', 'wcssc' ) } </h4>
         <ReCAPTCHA
-          sitekey="6LdNjfUUAAAAAP_-LHKXsJZUdpHrT2o_zADrUdl7"
+          sitekey={ CaptchaKey }
           onChange={ onSuccess }
           onExpired={Invalidate}
           onErrored={Invalidate}

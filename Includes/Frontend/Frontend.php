@@ -39,6 +39,13 @@ class Frontend {
 	private $rewrite;
 
 	/**
+	 * Cart object.
+	 *
+	 * @var Cart
+	 */
+	private $cart;
+
+	/**
 	 * Frontend constructor.
 	 *
 	 * @param Utility $util
@@ -47,6 +54,7 @@ class Frontend {
 		$this->util    = $util;
 		$this->enqueue = new Enqueue( $this->util );
 		$this->rewrite = new Rewrite();
+		$this->cart    = new Cart( $this->util );
 		$this->hooks();
 	}
 
@@ -54,6 +62,7 @@ class Frontend {
 	 * Add necessary hooks.
 	 */
 	public function hooks() {
+		add_filter( 'the_content', [ $this->cart, 'single_cart_content' ], 99 );
 		add_action( 'woocommerce_account_menu_items', [ $this, 'menu_items' ] );
 		add_action( $this->get_button_position(), [ $this, 'render_button' ] );
 	}
