@@ -28,3 +28,8 @@ Save and share cart can be useful in following situations:
 3. `cd assets/js` and run `npm i`. This will create all the necessary build files.
 
 4. Go to WordPress dashboard in `Plugins > Installed plugins` and activate the plugin.
+
+### Prerequisite
+
+This plugin uses reCaptcha v2 (checkbox) for preventing attacks from bots which may abuse `Save` and `Email` features of the plugin. You must register the site with Google Recaptcha v2 (Tickbox). You can register the site for recaptcha here: https://www.google.com/recaptcha/admin/create
+
