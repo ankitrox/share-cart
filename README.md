@@ -2,7 +2,7 @@
 
 [1. Overview](#overview)
 
-[2. Overview](#usage)
+[2. Usage/Installation](#usage)
 
 [3. Prerequisites for plugin to work](#prerequisites)
 
@@ -33,7 +33,7 @@ Save and share cart can be useful in following situations:
 
 5. Adding links to newsletters, ads or communications to quickly add products or sets of products to customers’ carts with one click. **Increasing sales!**
 
-### <a name="usage"></a> Usage
+### <a name="usage"></a> Usage/Installation
 
 1. Clone this repository in plugnis directory of wordpress.
 
