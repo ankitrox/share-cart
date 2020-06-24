@@ -29,9 +29,11 @@ Save and share cart can be useful in following situations:
 
 4. Go to WordPress dashboard in `Plugins > Installed plugins` and activate the plugin.
 
-### Prerequisite
+### Prerequisites for plugin to work
 
-This plugin uses reCaptcha v2 (checkbox) for preventing attacks from bots which may abuse `Save` and `Email` features of the plugin. You must register the site with Google Recaptcha v2 (Tickbox). You can register the site for recaptcha here: https://www.google.com/recaptcha/admin/create
+1. This plugin uses reCaptcha v2 (checkbox) for preventing attacks from bots which may abuse `Save` and `Email` features of the plugin. You must register the site with Google Recaptcha v2 (Tickbox). You can register the site for recaptcha here: https://www.google.com/recaptcha/admin/create
+
+2. In order for email to work, `Email body` field should be filled appropriately under `Email` settings tab (Described below).
 
 ### Plugin Settings Page
 
