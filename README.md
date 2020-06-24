@@ -33,3 +33,53 @@ Save and share cart can be useful in following situations:
 
 This plugin uses reCaptcha v2 (checkbox) for preventing attacks from bots which may abuse `Save` and `Email` features of the plugin. You must register the site with Google Recaptcha v2 (Tickbox). You can register the site for recaptcha here: https://www.google.com/recaptcha/admin/create
 
+### Plugin Settings Page
+
+Plugin settings options can be accessed via WooCommerce settings tab. Go to `WooCommerce > Settings > Share Cart` from your wordpress dashboard. Please note that these settings options would be accessible to only those with `shop_manager` capability in WordPress.
+
+Following is the description of each settings tab in settings page.
+
+##### 1. General Settings
+
+**Cart Share Settings**
+
+- Share button position - Select the position where you want to render the `Share cart` button. There are number of options available from which you can choose button placement.
+
+- Share cart button text - Button text to render.
+
+- Shared cart page title - If the cart does not have any title. This title will be used by default for the cart.
+
+**Enable social media for sharing**
+
+Select the social media platforms on which you want to allow your customers to share the cart. It includes following social media platforms:
+
+* Facebook
+* Twitter
+* Skype
+* WhatsApp
+
+Apart from it, you can also allow them to `Email` and `Save` cart. `Copy cart link to clipboard` option is also there if they want to share the cart on some other platforms.
+
+**Miscellaneous**
+
+- Captcha key - This is **important and required option**. you need to register for reCaptcha v2 as the site uses Captcha to prevent from bot attacks.
+
+##### 2. Email Settings
+
+- Email from address (optional) - If someone emails the cart, this address will be used as `from` address in email.
+- Email from name (optional) - Used as `from` name in email.
+- Email body (Required) - This will be sent as email body. There are several placeholders which can be used and will be replaced by appropriate data at the time of email being sent.
+
+These placeholdres are:
+
+`{cart_link}` - Link of the cart being shared.
+
+`{blogname}` - Name of WordPress site.
+
+`{siteurl}` - URL of WordPress blog.
+
+##### 3. Save cart settings
+
+- Saved cart title - This will be shown as navigation item title inside `My accounts` page.
+
+![Saved cart title](https://sharethingz.com/wp-content/uploads/2020/06/Webp.net-resizeimage.png)
