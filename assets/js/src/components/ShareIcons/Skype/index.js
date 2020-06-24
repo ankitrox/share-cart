@@ -1,10 +1,12 @@
 import React from 'react';
 
+const { __ } = window.wp.i18n;
+
 function SkypeIcon( { link } ) {
 
   return (
     <div>
-      <a target="_blank" href={"https://web.skype.com/share?url=" + encodeURIComponent(link) }>
+      <a title={ __('Share cart on Skype', 'wcssc') } target="_blank" href={"https://web.skype.com/share?url=" + encodeURIComponent(link) }>
         <i class="fab fa-skype"></i>
       </a>
     </div>

@@ -66,6 +66,7 @@ class Enqueue {
 		$settings['socials']                 = $this->util->plugin()->settings()->active_social_medias();
 		$settings['nonce']                   = is_user_logged_in() ? wp_create_nonce( 'wp_rest' ) : '';
 		$settings['wcssc_nonce']             = wp_create_nonce( 'wcssc_api' );
+		$settings['wcssc_btn_text']          = $this->util->plugin()->settings()->get( 'wcssc_btn_txt' );
 		$settings['wcssc_captcha_key']       = $this->util->plugin()->settings()->get( 'wcssc_captcha_key' );
 		$settings['api_path']['get_link']    = home_url( rest_get_url_prefix() . '/wcssc/v1/get-link' );
 		$settings['api_path']['save_cart']   = home_url( rest_get_url_prefix() . '/wcssc/v1/save-cart' );

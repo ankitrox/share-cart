@@ -22,12 +22,6 @@ return apply_filters( 'wcssc_settings_fields_email', array(
             'desc'     => __( 'Enter name from which email will be sent', 'wcssc' ),
             'id'       => 'wcssc_email_from_name'
         ),
-	
-        'wcssc_email_subject' => array(
-            'name'     => __( 'Email subject', 'wcssc' ),
-            'type'     => 'text',
-            'id'       => 'wcssc_email_subject'
-        ),
 
         'wcssc_email_body' => array(
             'name'     => __( 'Email body', 'wcssc' ),

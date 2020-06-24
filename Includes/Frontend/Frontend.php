@@ -98,7 +98,10 @@ class Frontend {
 			unset( $items['customer-logout'] );
 		}
 
-		$items['saved-carts']     = __( 'Saved carts', 'wcssc' );
+		$label = $this->util->plugin()->settings()->get( 'wcssc_saved_cart_title' );
+		$label = empty( $label ) ? __( 'Saved carts', 'wcssc' ) : $label;
+
+		$items['saved-carts']     = $label;
 
 		if( $logout_text ) {
 			$items['customer-logout'] = $logout_text;
