@@ -55,7 +55,7 @@ Plugin settings options can be accessed via WooCommerce settings tab. Go to `Woo
 
 Following is the description of each settings tab in settings page.
 
-##### <a name="general"></a> 1. General Settings
+### <a name="general"></a> 1. General Settings
 
 **Cart Share Settings**
 
@@ -80,7 +80,7 @@ Apart from it, you can also allow them to `Email` and `Save` cart. `Copy cart li
 
 - Captcha key - This is **important and required option**. you need to register for reCaptcha v2 as the site uses Captcha to prevent from bot attacks.
 
-##### <a name="email"></a> 2. Email Settings
+### <a name="email"></a> 2. Email Settings
 
 - Email from address (optional) - If someone emails the cart, this address will be used as `from` address in email.
 - Email from name (optional) - Used as `from` name in email.
@@ -94,7 +94,7 @@ These placeholdres are:
 
 `{siteurl}` - URL of WordPress blog.
 
-##### <a name="save-cart"></a> 3. Save cart settings
+### <a name="save-cart"></a> 3. Save cart settings
 
 - Saved cart title - This will be shown as navigation item title inside `My accounts` page.
 
