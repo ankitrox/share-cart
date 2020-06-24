@@ -1,6 +1,20 @@
 # Save and Share Cart for WooCommerce
 
-WordPress plugin which enabled woocommerce customers to:
+[1. Overview](#overview)
+
+[2. Overview](#usage)
+
+[3. Prerequisites for plugin to work](#prerequisites)
+
+[4. Plugin settings](#settings)
+
+  * [General Settings](#general)
+  * [Email settings](#email)
+  * [Save cart settings](#save-cart)
+
+
+
+<a name="overview"></a> **Save and Share Cart for WooCommerce** is a WordPress plugin which enabled woocommerce customers to:
 
 * Share cart on various social media platforms like Facebook, Twitter, WhatsApp etc.
 * Email the cart to someone else.
@@ -19,7 +33,7 @@ Save and share cart can be useful in following situations:
 
 5. Adding links to newsletters, ads or communications to quickly add products or sets of products to customers’ carts with one click. **Increasing sales!**
 
-### Usage
+### <a name="usage"></a> Usage
 
 1. Clone this repository in plugnis directory of wordpress.
 
@@ -29,19 +43,19 @@ Save and share cart can be useful in following situations:
 
 4. Go to WordPress dashboard in `Plugins > Installed plugins` and activate the plugin.
 
-### Prerequisites for plugin to work
+### <a name="prerequisites"></a> Prerequisites for plugin to work
 
 1. This plugin uses reCaptcha v2 (checkbox) for preventing attacks from bots which may abuse `Save` and `Email` features of the plugin. You must register the site with Google Recaptcha v2 (Tickbox). You can register the site for recaptcha here: https://www.google.com/recaptcha/admin/create
 
 2. In order for email to work, `Email body` field should be filled appropriately under `Email` settings tab (Described below).
 
-### Plugin Settings Page
+### <a name="settings"></a> Plugin Settings Page
 
 Plugin settings options can be accessed via WooCommerce settings tab. Go to `WooCommerce > Settings > Share Cart` from your wordpress dashboard. Please note that these settings options would be accessible to only those with `shop_manager` capability in WordPress.
 
 Following is the description of each settings tab in settings page.
 
-##### 1. General Settings
+##### <a name="general"></a> 1. General Settings
 
 **Cart Share Settings**
 
@@ -66,7 +80,7 @@ Apart from it, you can also allow them to `Email` and `Save` cart. `Copy cart li
 
 - Captcha key - This is **important and required option**. you need to register for reCaptcha v2 as the site uses Captcha to prevent from bot attacks.
 
-##### 2. Email Settings
+##### <a name="email"></a> 2. Email Settings
 
 - Email from address (optional) - If someone emails the cart, this address will be used as `from` address in email.
 - Email from name (optional) - Used as `from` name in email.
@@ -80,7 +94,7 @@ These placeholdres are:
 
 `{siteurl}` - URL of WordPress blog.
 
-##### 3. Save cart settings
+##### <a name="save-cart"></a> 3. Save cart settings
 
 - Saved cart title - This will be shown as navigation item title inside `My accounts` page.
 
