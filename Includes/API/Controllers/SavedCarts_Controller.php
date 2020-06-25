@@ -30,14 +30,14 @@ class SavedCarts_Controller extends WP_REST_Posts_Controller {
 			return $post;
 		}
 
-		if( ! is_user_logged_in() ) {
+		if ( ! is_user_logged_in() ) {
 			return new WP_Error( 'rest_cannot_delete', __( 'This operation is not allowed', 'wcssc' ), [ 'status' => rest_authorization_required_code() ] );
 		}
 
 		$user_id = get_current_user_id();
-		$author = (int) $post->post_author;
+		$author  = (int) $post->post_author;
 
-		if( $author !== $user_id ) {
+		if ( $author !== $user_id ) {
 			return new WP_Error( 'rest_cannot_delete', __( 'You are not authorized to do this operation', 'wcssc' ), [ 'status' => rest_authorization_required_code() ] );
 		}
 

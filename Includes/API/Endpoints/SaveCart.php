@@ -46,7 +46,7 @@ class SaveCart implements Endpoint {
 			]
 		);
 
-		if( ! is_wp_error( $cart ) ) {
+		if ( ! is_wp_error( $cart ) ) {
 			return new WP_REST_Response(
 				[
 					'success' => true,

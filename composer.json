@@ -7,6 +7,9 @@
         "wp-coding-standards/wpcs": "2.1.1",
         "dealerdirect/phpcodesniffer-composer-installer": "^0.6.0"
     },
+    "scripts": {
+        "php:lint": "vendor/bin/phpcs ."
+    },
     "autoload": {
         "psr-4": {
             "Ankit\\WCSSC\\": "Includes"

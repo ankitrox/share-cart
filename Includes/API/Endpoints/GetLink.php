@@ -70,7 +70,7 @@ class GetLink implements Endpoint {
 	public function permission_callback() {
 		$cart_hash = isset( $_COOKIE['woocommerce_cart_hash'] ) ? sanitize_text_field( $_COOKIE['woocommerce_cart_hash'] ) : null;
 
-		if( ! $cart_hash ) {
+		if ( ! $cart_hash ) {
 			return false;
 		}
 

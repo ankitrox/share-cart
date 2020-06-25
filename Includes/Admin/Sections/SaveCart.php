@@ -10,7 +10,7 @@
 
 namespace Ankit\WCSSC\Section;
 
-if( ! defined( 'ABSPATH' ) ) {
+if ( ! defined( 'ABSPATH' ) ) {
 	wp_die( __( 'This operation is not allowed', 'wcssc' ) );
 }
 

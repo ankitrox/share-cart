@@ -10,7 +10,7 @@
 
 namespace Ankit\WCSSC\Admin;
 
-if( ! defined( 'ABSPATH' ) ) {
+if ( ! defined( 'ABSPATH' ) ) {
 	wp_die( __( 'This operation is not allowed', 'wcssc' ) );
 }
 
@@ -48,8 +48,8 @@ class Admin {
 	 *
 	 * @return array
 	 */
-	public function setting_page ( $settings_pages ) {
-		$this->settings = new Settings();
+	public function setting_page( $settings_pages ) {
+		$this->settings   = new Settings();
 		$settings_pages[] = $this->settings;
 
 		return $settings_pages;

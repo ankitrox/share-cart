@@ -7,7 +7,7 @@
 
 namespace Ankit\WCSSC\Admin;
 
-if( ! defined( 'ABSPATH' ) ) {
+if ( ! defined( 'ABSPATH' ) ) {
 	wp_die( __( 'This operation is not allowed', 'wcssc' ) );
 }
 
@@ -41,8 +41,8 @@ class Settings extends WC_Settings_Page {
 	 * Settings constructor.
 	 */
 	public function __construct() {
-		$this->id       = $this->tab;
-		$this->label    = __( 'Save Share Cart', 'wcssc' );
+		$this->id    = $this->tab;
+		$this->label = __( 'Save Share Cart', 'wcssc' );
 		parent::__construct();
 
 		$this->sub_sections['general']   = new General();
@@ -106,7 +106,7 @@ class Settings extends WC_Settings_Page {
 	 * @param SettingsSubSection $section
 	 */
 	public function add_section( SettingsSubSection $section ) {
-		$name = (string) $section->get_name();
+		$name                        = (string) $section->get_name();
 		$this->sub_sections[ $name ] = $section;
 	}
 

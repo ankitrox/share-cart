@@ -33,7 +33,7 @@ class Frontend {
 
 	/**
 	 * Rewrite object.
-	 * 
+	 *
 	 * @var Rewrite
 	 */
 	private $rewrite;
@@ -101,9 +101,9 @@ class Frontend {
 		$label = $this->util->plugin()->settings()->get( 'wcssc_saved_cart_title' );
 		$label = empty( $label ) ? __( 'Saved carts', 'wcssc' ) : $label;
 
-		$items['saved-carts']     = $label;
+		$items['saved-carts'] = $label;
 
-		if( $logout_text ) {
+		if ( $logout_text ) {
 			$items['customer-logout'] = $logout_text;
 		}
 

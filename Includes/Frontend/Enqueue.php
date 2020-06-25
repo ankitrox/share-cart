@@ -84,12 +84,12 @@ class Enqueue {
 		 */
 		$asset_manifest = json_decode( file_get_contents( WCSSC_ASSET_MANIFEST ), true )['files'];
 
-		if ( isset( $asset_manifest[ 'main.css' ] ) ) {
-			wp_enqueue_style( 'wcssc', WCSSC_ASSETS_BUILD . $asset_manifest[ 'main.css' ] );
+		if ( isset( $asset_manifest['main.css'] ) ) {
+			wp_enqueue_style( 'wcssc', WCSSC_ASSETS_BUILD . $asset_manifest['main.css'] );
 		}
 
-		wp_enqueue_script( 'wcssc-runtime', WCSSC_ASSETS_BUILD . $asset_manifest[ 'runtime-main.js' ], [ 'wp-data', 'wp-core-data', 'wp-i18n' ], null, true );
-		wp_enqueue_script( 'wcssc-main', WCSSC_ASSETS_BUILD . $asset_manifest[ 'main.js' ], ['wcssc-runtime'], null, true );
+		wp_enqueue_script( 'wcssc-runtime', WCSSC_ASSETS_BUILD . $asset_manifest['runtime-main.js'], [ 'wp-data', 'wp-core-data', 'wp-i18n' ], null, true );
+		wp_enqueue_script( 'wcssc-main', WCSSC_ASSETS_BUILD . $asset_manifest['main.js'], [ 'wcssc-runtime' ], null, true );
 		wp_set_script_translations( 'wcssc-main', 'wcssc' );
 
 		wp_localize_script( 'wcssc-main', 'wcssc_settings', $settings );
@@ -98,15 +98,15 @@ class Enqueue {
 
 			if ( preg_match( '@static/js/(.*)\.chunk\.js@', $key, $matches ) ) {
 				if ( $matches && is_array( $matches ) && count( $matches ) === 2 ) {
-					$name = "wcssc-" . preg_replace( '/[^A-Za-z0-9_]/', '-', $matches[1] );
+					$name = 'wcssc-' . preg_replace( '/[^A-Za-z0-9_]/', '-', $matches[1] );
 					wp_enqueue_script( $name, WCSSC_ASSETS_BUILD . $value, array( 'wcssc-main' ), null, true );
 				}
 			}
 
 			if ( preg_match( '@static/css/(.*)\.chunk\.css@', $key, $matches ) ) {
 				if ( $matches && is_array( $matches ) && count( $matches ) == 2 ) {
-					$name = "wcssc-" . preg_replace( '/[^A-Za-z0-9_]/', '-', $matches[1] );
-					wp_enqueue_style( $name, WCSSC_ASSETS_BUILD . $value, ['wcssc'], null );
+					$name = 'wcssc-' . preg_replace( '/[^A-Za-z0-9_]/', '-', $matches[1] );
+					wp_enqueue_style( $name, WCSSC_ASSETS_BUILD . $value, [ 'wcssc' ], null );
 				}
 			}
 		}

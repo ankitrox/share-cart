@@ -47,7 +47,7 @@ class API_Manager {
 	 * @param Utility $utils
 	 */
 	public function __construct( Utility $utils ) {
-		$this->utility = $utils;
+		$this->utility     = $utils;
 		$this->endpoints[] = new GetLink();
 		$this->endpoints[] = new SaveCart();
 		$this->endpoints[] = new EmailCart();
@@ -64,12 +64,16 @@ class API_Manager {
 	 */
 	public function register_endpoints() {
 		foreach ( $this->endpoints as $endpoint ) {
-			register_rest_route( $this->namespace, $endpoint->endpoint(), [
-				'methods'             => $endpoint->method(),
-				'callback'            => [ $endpoint, 'callback' ],
-				'args'                => [ 'helper' => serialize( $this->utility ) ],
-				'permission_callback' => [ $endpoint, 'permission_callback' ],
-			] );
+			register_rest_route(
+				$this->namespace,
+				$endpoint->endpoint(),
+				[
+					'methods'             => $endpoint->method(),
+					'callback'            => [ $endpoint, 'callback' ],
+					'args'                => [ 'helper' => serialize( $this->utility ) ],
+					'permission_callback' => [ $endpoint, 'permission_callback' ],
+				]
+			);
 		}
 	}
 

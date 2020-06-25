@@ -50,12 +50,15 @@ class Cart {
 		/**
 		 * Setup cart related data.
 		 */
-		add_action( 'wp', function () {
-			if ( is_singular( 'wcssc-cart' ) ) {
-				$this->cart      = get_post_meta( get_the_ID(), 'wcssc_cart_data', true );
-				$this->load_cart = wp_nonce_url( get_permalink( get_the_ID() ), 'load_wcssc_cart', 'load_cart' );
+		add_action(
+			'wp',
+			function () {
+				if ( is_singular( 'wcssc-cart' ) ) {
+					$this->cart      = get_post_meta( get_the_ID(), 'wcssc_cart_data', true );
+					$this->load_cart = wp_nonce_url( get_permalink( get_the_ID() ), 'load_wcssc_cart', 'load_cart' );
+				}
 			}
-		});
+		);
 
 		add_action( 'wp', [ $this, 'load_cart' ], 11 );
 	}
@@ -94,7 +97,7 @@ class Cart {
 		global $woocommerce;
 		$load_cart_nonce = filter_input( INPUT_GET, 'load_cart', FILTER_SANITIZE_STRING );
 
-		if( $this->cart && wp_verify_nonce( $load_cart_nonce, 'load_wcssc_cart' ) ) {
+		if ( $this->cart && wp_verify_nonce( $load_cart_nonce, 'load_wcssc_cart' ) ) {
 			$woocommerce->cart->empty_cart();
 
 			foreach ( $this->cart as $key => $item ) {

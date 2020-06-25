@@ -63,6 +63,6 @@ class Rewrite {
 	}
 
 	public function saved_carts_table() {
-		echo '<div id="saved-carts-table">' . __( "Loading your saved carts...", "wcssc" ) . '</div>';
+		echo '<div id="saved-carts-table">' . __( 'Loading your saved carts...', 'wcssc' ) . '</div>';
 	}
 }

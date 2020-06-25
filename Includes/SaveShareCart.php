@@ -135,25 +135,28 @@ class SaveShareCart {
 		$labels = apply_filters( 'wcssc_post_type_labels', $labels );
 
 		$args = array(
-			'labels' => $labels,
-			'public' => false,
-			'publicly_queryable' => true,
-			'show_ui' => true,
-			'show_in_menu' => true,
-			'query_var' => true,
-			'rewrite' => array( 'slug' => 'wcssc-cart' ),
-			'capability_type' => 'post',
-			'has_archive' => false,
-			'hierarchical' => false,
-			'menu_position' => null,
-			'show_in_rest' => true,
+			'labels'                => $labels,
+			'public'                => false,
+			'publicly_queryable'    => true,
+			'show_ui'               => true,
+			'show_in_menu'          => true,
+			'query_var'             => true,
+			'rewrite'               => array( 'slug' => 'wcssc-cart' ),
+			'capability_type'       => 'post',
+			'has_archive'           => false,
+			'hierarchical'          => false,
+			'menu_position'         => null,
+			'show_in_rest'          => true,
 			'rest_controller_class' => 'Ankit\WCSSC\API\Controllers\SavedCarts_Controller',
-			'supports' => apply_filters( 'wcssc_post_type_supports', array(
-				'title',
-				'author',
-				'custom-fields',
-				'editor',
-			) ),
+			'supports'              => apply_filters(
+				'wcssc_post_type_supports',
+				array(
+					'title',
+					'author',
+					'custom-fields',
+					'editor',
+				)
+			),
 		);
 
 		//Filter the post type args.
@@ -167,14 +170,17 @@ class SaveShareCart {
 	 * Register custom status.
 	 */
 	public function register_post_statuses() {
-		register_post_status( 'formed', array(
-			'label'                     => _x('Formed', 'wcssc'),
-			'public'                    => true,
-			'exclude_from_search'       => false,
-			'show_in_admin_all_list'    => true,
-			'show_in_admin_status_list' => true,
-			'label_count'               => _n_noop( 'Formed <span class="count">(%s)</span>', 'Formed <span class="count">(%s)</span>' ),
-		));
+		register_post_status(
+			'formed',
+			array(
+				'label'                     => _x( 'Formed', 'wcssc' ),
+				'public'                    => true,
+				'exclude_from_search'       => false,
+				'show_in_admin_all_list'    => true,
+				'show_in_admin_status_list' => true,
+				'label_count'               => _n_noop( 'Formed <span class="count">(%s)</span>', 'Formed <span class="count">(%s)</span>' ),
+			)
+		);
 	}
 
 }

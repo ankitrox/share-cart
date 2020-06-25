@@ -70,7 +70,7 @@ class Utility {
 	public function get_cart_link_by_hash( string $hash = null ) {
 		$cart = $this->get_cart_by_hash( $hash );
 
-		if( ! $cart ) {
+		if ( ! $cart ) {
 			return '';
 		}
 
@@ -97,7 +97,7 @@ class Utility {
 			],
 			'post_author' => 1,
 			'post_status' => 'formed',
-			'post_type'   => 'wcssc-cart'
+			'post_type'   => 'wcssc-cart',
 		];
 
 		$args = wp_parse_args( $args, $defaults );

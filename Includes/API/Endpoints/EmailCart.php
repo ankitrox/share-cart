@@ -46,11 +46,11 @@ class EmailCart implements Endpoint {
 
 		$sent = wp_mail( $email_address, $subject, $body, $headers );
 
-		if( $sent ) {
+		if ( $sent ) {
 			return new WP_REST_Response(
 				[
 					'success' => true,
-					'message' => __( 'Email sent successfully', 'wcssc' )
+					'message' => __( 'Email sent successfully', 'wcssc' ),
 				]
 			);
 		}
@@ -58,7 +58,7 @@ class EmailCart implements Endpoint {
 		return new WP_REST_Response(
 			[
 				'success' => false,
-				'message' => __( 'Error: Email cannot be sent at this moment.', 'wcssc' )
+				'message' => __( 'Error: Email cannot be sent at this moment.', 'wcssc' ),
 			]
 		);
 

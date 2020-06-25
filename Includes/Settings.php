@@ -49,11 +49,11 @@ class Settings {
 	 * @return mixed|false
 	 */
 	public function get( string $setting ) {
-		if( ! $setting || ! isset( $this->configs[$setting] ) ) {
+		if ( ! $setting || ! isset( $this->configs[ $setting ] ) ) {
 			return false;
 		}
 
-		return $this->configs[$setting];
+		return $this->configs[ $setting ];
 	}
 
 	/**
@@ -66,8 +66,8 @@ class Settings {
 			$resultant = array_merge( $resultant, $type->get_fields() );
 		}
 
-		foreach( $resultant as $key => $value ) {
-			if( ! isset( $value['id'] ) ) {
+		foreach ( $resultant as $key => $value ) {
+			if ( ! isset( $value['id'] ) ) {
 				unset( $resultant['key'] );
 			}
 		}
@@ -82,7 +82,7 @@ class Settings {
 		$settings = $this->prepare_settings();
 
 		foreach ( $settings as $setting ) {
-			$this->configs[$setting] = get_option( $setting, null );
+			$this->configs[ $setting ] = get_option( $setting, null );
 		}
 	}
 
