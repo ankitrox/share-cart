@@ -38,7 +38,8 @@ class Admin {
 	 * Add admin related hooks.
 	 */
 	public function hooks() {
-		add_filter( 'woocommerce_get_settings_pages', array( $this, 'setting_page' ) );
+		add_filter( 'plugin_action_links_' . plugin_basename( WCSSC_BASE_FILE ), [ $this, 'settings_link' ] );
+		add_filter( 'woocommerce_get_settings_pages', [ $this, 'setting_page' ] );
 	}
 
 	/**
@@ -53,6 +54,28 @@ class Admin {
 		$settings_pages[] = $this->settings;
 
 		return $settings_pages;
+	}
+
+	/**
+	 * Add `settings` link in plugin listings page beneath the plugin name.
+	 *
+	 * @param array $links Action links list.
+	 *
+	 * @return array
+	 */
+	public function settings_link( $links ) {
+		$url = add_query_arg(
+			[
+				'page' => 'wc-settings',
+				'tab'  => 'wcssc',
+			],
+
+			admin_url('admin.php')
+		);
+
+		$links[] = '<a href="' . $url . '">' . __( 'Settings', 'wcssc' ) . '</a>';
+
+		return $links;
 	}
 
 }

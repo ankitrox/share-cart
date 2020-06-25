@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Save and Share Cart for WooCommerce - Revised
+ * Plugin Name: Save and Share Cart for WooCommerce
  * Plugin URI: http://wc-cart.com/
  * Description: A WooCommerce plugin to share cart on different social media platforms.
  * Version: 2.0.0
