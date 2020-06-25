@@ -10,9 +10,11 @@ class SavedCarts_Controller extends WP_REST_Posts_Controller {
 	/**
 	 * Allow logged in user to get the list of saved carts.
 	 *
+	 * @param \WP_REST_Request $request Request object.
+	 *
 	 * @return bool|true|\WP_Error
 	 */
-	public function get_items_permissions_check() {
+	public function get_items_permissions_check( $request ) {
 		if ( is_user_logged_in() ) {
 			return true;
 		}
@@ -53,7 +55,7 @@ class SavedCarts_Controller extends WP_REST_Posts_Controller {
 	 *
 	 * @return bool Whether the post can be deleted.
 	 */
-	public function check_delete_permission( WP_Post $post ) {
+	public function check_delete_permission( $post ) {
 
 		return (int) $post->post_author === get_current_user_id();
 	}
