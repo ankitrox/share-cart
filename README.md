@@ -11,6 +11,8 @@
   * [General Settings](#general)
   * [Email settings](#email)
   * [Save cart settings](#save-cart)
+  
+[5. Translating the plugin](#translation)
 
 
 
@@ -99,3 +101,26 @@ These placeholdres are:
 - Saved cart title - This will be shown as navigation item title inside `My accounts` page.
 
 ![Saved cart title](https://sharethingz.com/wp-content/uploads/2020/06/Webp.net-resizeimage.png)
+
+
+### <a name="translation"></a> Localization
+
+You can translate the plugin in your language with the following steps. 
+
+Consider you need to translate the plugin to Polish language (pl_PL)
+
+1. Fork this repo, clone your forked repository in your system and create a new branch with `git checkout -b branch-name`
+
+2. Go to `share-cart/languages` directory, create a new directory `pl_PL` (Same as locale).
+
+3. Run `cp wcssc.pot pl_PL/wcssc-pl_PL.po`. This will create a .po inside `pl_PL` directory.
+
+4. Open `wcssc-pl_PL.po` with poedit or any other software and translate the strings. Save the .mo file inside `languages/pl_PL` directory. .mo file name should be `wcssc-pl_PL.mo` (for this example).
+
+5. Now, to translate JS string, you should run move to `share-cart` repository (Root of this repo). Run `npm install`. This will install jed and po2json for you.
+
+6. Run command from root of the repo in terminal, `npx po2json languages/wcssc-js.po languages/pl_PL/wcssc-pl_PL-wcssc-main.json -p -f jed1.x`. Note that for other languages it should be in format `wcssc-{$locale}-wcssc-main.json`
+
+7. Once the `.json` file is created, add the translation to that json file.
+
+Once all the above steps are completed, commit and push the changes to your repository. Create a PR from your repo to this repo. For more information on how to create PR for someone else's repo, please refer [this link](https://kbroman.org/github_tutorial/pages/fork.html)
