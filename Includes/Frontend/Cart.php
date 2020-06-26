@@ -101,7 +101,7 @@ class Cart {
 			$woocommerce->cart->empty_cart();
 
 			foreach ( $this->cart as $key => $item ) {
-				$woocommerce->cart->add_to_cart( $item['product_id'], $item['quantity'], $item['variation_id'], $item['variation'] );
+				$woocommerce->cart->add_to_cart( $item['product_id'], $item['quantity'], $item['variation_id'], $item['variation'], $item );
 			}
 
 			wp_redirect( get_permalink( wc_get_page_id( 'cart' ) ) );
