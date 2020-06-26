@@ -90,7 +90,7 @@ class Enqueue {
 
 		wp_enqueue_script( 'wcssc-runtime', WCSSC_ASSETS_BUILD . $asset_manifest['runtime-main.js'], [ 'wp-data', 'wp-core-data', 'wp-i18n' ], null, true );
 		wp_enqueue_script( 'wcssc-main', WCSSC_ASSETS_BUILD . $asset_manifest['main.js'], [ 'wcssc-runtime' ], null, true );
-		wp_set_script_translations( 'wcssc-main', 'wcssc' );
+		wp_set_script_translations( 'wcssc-main', 'wcssc', WCSSC_BASE . '/languages/' . get_locale() );
 
 		wp_localize_script( 'wcssc-main', 'wcssc_settings', $settings );
 
