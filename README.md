@@ -103,7 +103,7 @@ These placeholdres are:
 ![Saved cart title](https://sharethingz.com/wp-content/uploads/2020/06/Webp.net-resizeimage.png)
 
 
-### <a name="translation"></a> Localization
+### <a name="translation"></a> 5. Localization
 
 You can translate the plugin in your language with the following steps. 
 
