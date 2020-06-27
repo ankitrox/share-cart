@@ -58,6 +58,9 @@ You can register the site for recaptcha here: https://www.google.com/recaptcha/a
 You can access the saved carts in "My accounts" section of WooCommerce. You should be able to see "Saved carts" menu in
 the account navigation.
 
+= How to localize the plugin in other languages? =
+Detailed documentation for localization process is [here](https://github.com/ankitrox/share-cart#translation)
+
 == Screenshots ==
 
 1. General Settings.
@@ -67,6 +70,10 @@ the account navigation.
 5. Share cart pop-up.
 
 == Changelog ==
+
+= 2.0.1 =
+* Add support for localization in JS.
+* Fix: Bundled products not getting added back to cart.
 
 = 2.0.0 =
 * Rewrite: Revamp entire plugin to use React.js components.
@@ -108,6 +115,10 @@ the account navigation.
 * First release.
 
 == Upgrade Notice ==
+
+= 2.0.1 =
+* Added support for localization.
+* Fix: Support to add bundled products.
 
 = 2.0.0 =
 * Complete revamp of the plugin.
