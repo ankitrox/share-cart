@@ -3,7 +3,7 @@
  * Plugin Name: Save and Share Cart for WooCommerce
  * Plugin URI: http://wc-cart.com/
  * Description: A WooCommerce plugin to share cart on different social media platforms.
- * Version: 2.0.0
+ * Version: 2.0.1
  * Author: Ankit Gade
  * Author URI: https://sharethingz.com/
  * Text Domain: wcssc
