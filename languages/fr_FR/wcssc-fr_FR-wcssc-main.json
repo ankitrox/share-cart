@@ -1,0 +1,88 @@
+{
+   "domain": "messages",
+   "locale_data": {
+      "messages": {
+         "": {
+            "domain": "messages"
+         },
+         "We love humans!": [
+            ""
+         ],
+         "Cart link copied to clipboard": [
+            ""
+         ],
+         "Email Cart": [
+            ""
+         ],
+         "Must be 50 characters or less": [
+            ""
+         ],
+         "Required": [
+            ""
+         ],
+         "Email address": [
+            ""
+         ],
+         "Email to whom you want to send cart": [
+            ""
+         ],
+         "Email Title": [
+            ""
+         ],
+         "Email subject": [
+            ""
+         ],
+         "Back": [
+            ""
+         ],
+         "Submit": [
+            ""
+         ],
+         "Cart Name": [
+            ""
+         ],
+         "Remove Cart": [
+            ""
+         ],
+         "There are no saved carts to display.": [
+            ""
+         ],
+         "Are you sure you want to delete this?": [
+            ""
+         ],
+         "Cancel": [
+            ""
+         ],
+         "Save Cart": [
+            ""
+         ],
+         "Cart Title": [
+            ""
+         ],
+         "Cart Description": [
+            ""
+         ],
+         "Copy cart link to clipboard": [
+            ""
+         ],
+         "Email this cart": [
+            ""
+         ],
+         "Share on Facebook": [
+            ""
+         ],
+         "Save the cart": [
+            ""
+         ],
+         "Share cart on Skype": [
+            ""
+         ],
+         "Share cart on Twitter": [
+            ""
+         ],
+         "Share cart on WhatsApp": [
+            ""
+         ]
+      }
+   }
+}

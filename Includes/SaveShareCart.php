@@ -89,6 +89,14 @@ class SaveShareCart {
 	private function hooks() {
 		add_action( 'init', [ $this, 'register_post_type' ] );
 		add_action( 'init', [ $this, 'register_post_statuses' ] );
+		add_action( 'init', [ $this, 'load_textdomain' ] );
+	}
+
+	/**
+	 * Load the plugin translation if available.
+	 */
+	public function load_textdomain() {
+		load_plugin_textdomain( 'wcssc', false, basename( dirname( WCSSC_BASE_FILE ) ) . '/languages/' . get_locale() );
 	}
 
 	/**

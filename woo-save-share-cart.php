@@ -7,7 +7,7 @@
  * Author: Ankit Gade
  * Author URI: https://sharethingz.com/
  * Text Domain: wcssc
- * Domain Path: /i18n/languages/
+ * Domain Path: /languages
  *
  * @package Ankit\WCSSC
  */

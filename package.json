@@ -13,5 +13,9 @@
     "react-redux": "^7.2.0",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "jed": "^1.1.1",
+    "po2json": "^0.4.5"
   }
 }

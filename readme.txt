@@ -28,11 +28,21 @@ This plugin allows you to save and share WooCommerce cart directly from your sto
 * For customization according to your need contact: https://www.facebook.com/shrthngz
 
 == Installation ==
-Install Save and Share Cart for WooCommerce from the 'Plugins' section in your dashboard (Plugins > Add New > Search for Save and Share Cart for WooCommerce ).
+1. Install Save and Share Cart for WooCommerce from the 'Plugins' section in your dashboard (Plugins > Add New > Search for Save and Share Cart for WooCommerce ).
 
-Place the downloaded plugin directory into your wordpress plugin directory.
+2. Alternatively, you can [download](https://downloads.wordpress.org/plugin/woo-save-and-share-cart.zip) the plugin from the repository. Unzip it and upload it to the plugins folder of your WordPress installation (wp-content/plugins/ directory of your WordPress installation).
 
-Activate it through the 'Plugins' section.
+3. Activate it through the 'Plugins' section.
+
+**Notes**
+
+* You should have WordPress version 5.0+ in order to use this plugin.
+
+* You should register your site in reCaptcha v2 (Tickbox). You can register the reCaptcha v2 from [this link](https://www.google.com/recaptcha/admin/create)
+
+* Notice in following image, reCaptcha v2 with tickbox type is selected.
+
+[reCaptcha v2 Tickbox](https://sharethingz.com/wp-content/uploads/2020/06/Screen-Shot-2020-06-27-at-9.31.17-AM.png)
 
 == Frequently Asked Questions ==
 

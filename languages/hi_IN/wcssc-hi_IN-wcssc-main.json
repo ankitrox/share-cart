@@ -1,0 +1,88 @@
+{
+   "domain": "messages",
+   "locale_data": {
+      "messages": {
+         "": {
+            "domain": "messages"
+         },
+         "We love humans!": [
+            "हम इंसानों से प्यार करते हैं"
+         ],
+         "Cart link copied to clipboard": [
+            "क्लिपबोर्ड पर कार्ट लिंक कॉपी किया गया"
+         ],
+         "Email Cart": [
+            "कार्ट ईमेल कीजिये"
+         ],
+         "Must be 50 characters or less": [
+            "50 अक्षर या उससे कम होना चाहिए"
+         ],
+         "Required": [
+            "अपेक्षित"
+         ],
+         "Email address": [
+            "ईमेल पता"
+         ],
+         "Email to whom you want to send cart": [
+            "जिसे आप भेजना चाहते हैं, उसका पता"
+         ],
+         "Email Title": [
+            "ईमेल शीर्षक"
+         ],
+         "Email subject": [
+            "ईमेल विषय"
+         ],
+         "Back": [
+            "वापस"
+         ],
+         "Submit": [
+            "प्रस्तुत"
+         ],
+         "Cart Name": [
+            "कार्ट का नाम"
+         ],
+         "Remove Cart": [
+            "कर्ट को हटा दें"
+         ],
+         "There are no saved carts to display.": [
+            "प्रदर्शन करने के लिए कोई सहेजे गए कार्ट नहीं हैं।"
+         ],
+         "Are you sure you want to delete this?": [
+            "क्या आप वाकई इसे हटाना चाहते हैं?"
+         ],
+         "Cancel": [
+            "इसे रद्द करें"
+         ],
+         "Save Cart": [
+            "कार्ट को सहेजें"
+         ],
+         "Cart Title": [
+            "कार्ट शीर्षक"
+         ],
+         "Cart Description": [
+            "कार्ट वर्णन"
+         ],
+         "Copy cart link to clipboard": [
+            "क्लिपबोर्ड पर कार्ट लिंक कॉपी करें"
+         ],
+         "Email this cart": [
+            "इस कार्ट को ईमेल करें"
+         ],
+         "Share on Facebook": [
+            "फेसबुक पर सांझा करें"
+         ],
+         "Save the cart": [
+            "कार्ट को सहेजें"
+         ],
+         "Share cart on Skype": [
+            "स्काइप पर सांझा करें"
+         ],
+         "Share cart on Twitter": [
+            "ट्विटर पर सांझा करें"
+         ],
+         "Share cart on WhatsApp": [
+            "व्हाट्सएप पर सांझा करें"
+         ]
+      }
+   }
+}
