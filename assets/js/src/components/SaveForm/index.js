@@ -1,7 +1,7 @@
 import React from 'react';
 import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
-import { ReactComponent as Loader } from '../../media/loader.svg'
+import Loader from '../../media/loader.svg'
 
 const { __ } = window.wp.i18n;
 

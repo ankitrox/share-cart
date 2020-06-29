@@ -78,38 +78,11 @@ class Enqueue {
 		 * Enqueue font awesome script
 		 */
 		wp_enqueue_style( 'wcssc-font-awesome', 'https://use.fontawesome.com/releases/v5.12.1/css/all.css', array(), false );
-
-		/**
-		 * Load build scripts from React.
-		 */
-		$asset_manifest = json_decode( file_get_contents( WCSSC_ASSET_MANIFEST ), true )['files'];
-
-		if ( isset( $asset_manifest['main.css'] ) ) {
-			wp_enqueue_style( 'wcssc', WCSSC_ASSETS_BUILD . $asset_manifest['main.css'] );
-		}
-
-		wp_enqueue_script( 'wcssc-runtime', WCSSC_ASSETS_BUILD . $asset_manifest['runtime-main.js'], [ 'wp-data', 'wp-core-data', 'wp-i18n' ], null, true );
-		wp_enqueue_script( 'wcssc-main', WCSSC_ASSETS_BUILD . $asset_manifest['main.js'], [ 'wcssc-runtime' ], null, true );
+		wp_enqueue_style( 'wcssc', WCSSC_ASSETS_BUILD . '/main.css' );
+		wp_enqueue_script( 'wcssc-main', WCSSC_ASSETS_BUILD . '/index.js', [ 'wp-data', 'wp-core-data', 'wp-i18n' ], null, true );
 		wp_set_script_translations( 'wcssc-main', 'wcssc', WCSSC_BASE . '/languages/' . get_locale() );
-
 		wp_localize_script( 'wcssc-main', 'wcssc_settings', $settings );
 
-		foreach ( $asset_manifest as $key => $value ) {
-
-			if ( preg_match( '@static/js/(.*)\.chunk\.js@', $key, $matches ) ) {
-				if ( $matches && is_array( $matches ) && count( $matches ) === 2 ) {
-					$name = 'wcssc-' . preg_replace( '/[^A-Za-z0-9_]/', '-', $matches[1] );
-					wp_enqueue_script( $name, WCSSC_ASSETS_BUILD . $value, array( 'wcssc-main' ), null, true );
-				}
-			}
-
-			if ( preg_match( '@static/css/(.*)\.chunk\.css@', $key, $matches ) ) {
-				if ( $matches && is_array( $matches ) && count( $matches ) == 2 ) {
-					$name = 'wcssc-' . preg_replace( '/[^A-Za-z0-9_]/', '-', $matches[1] );
-					wp_enqueue_style( $name, WCSSC_ASSETS_BUILD . $value, [ 'wcssc' ], null );
-				}
-			}
-		}
 	}
 
 }
