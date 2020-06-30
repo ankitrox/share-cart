@@ -71,6 +71,15 @@ Detailed documentation for localization process is [here](https://github.com/ank
 
 == Changelog ==
 
+= 2.0.3 =
+* Default user for `formed` carts.
+
+= 2.0.2 =
+* Fix: Captcha is now optional.
+* Fix: CSS only for modal.
+* Performance: Optimize build.
+* Performance: Load scripts and styles only on cart and account page.
+
 = 2.0.1 =
 * Add support for localization in JS.
 * Fix: Bundled products not getting added back to cart.
