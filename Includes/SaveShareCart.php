@@ -87,6 +87,7 @@ class SaveShareCart {
 	 * Hooks to run during plugin initialization.
 	 */
 	private function hooks() {
+		register_activation_hook( WCSSC_BASE_FILE, [ $this->utils, 'install' ] );
 		add_action( 'init', [ $this, 'register_post_type' ] );
 		add_action( 'init', [ $this, 'register_post_statuses' ] );
 		add_action( 'init', [ $this, 'load_textdomain' ] );
