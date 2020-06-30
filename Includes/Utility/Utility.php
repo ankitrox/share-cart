@@ -23,12 +23,20 @@ class Utility {
 	private $plugin;
 
 	/**
+	 * Default user for cart creation
+	 *
+	 * @var int
+	 */
+	private $default_user;
+
+	/**
 	 * Utility constructor.
 	 *
 	 * @param SaveShareCart $plugin
 	 */
 	public function __construct( SaveShareCart $plugin ) {
-		$this->plugin = $plugin;
+		$this->plugin       = $plugin;
+		$this->default_user = get_option( 'wcssc_user' );
 	}
 
 	/**
@@ -87,21 +95,42 @@ class Utility {
 	public function create_cart( array $args = [] ) {
 		$data      = WC()->cart->cart_contents;
 		$cart_hash = $_COOKIE['woocommerce_cart_hash'];
-
-		$defaults = [
+		$defaults  = [
 			'post_title'  => __( 'Shared cart - ' . $cart_hash, 'wcssc' ),
 			'post_name'   => $cart_hash,
 			'meta_input'  => [
 				'wcssc_cart_data' => $data,
 				'wcssc_cart_hash' => $cart_hash,
 			],
-			'post_author' => 1,
+			'post_author' => is_user_logged_in() ? get_current_user_id() : $this->default_user,
 			'post_status' => 'formed',
 			'post_type'   => 'wcssc-cart',
 		];
-
-		$args = wp_parse_args( $args, $defaults );
+		$args      = wp_parse_args( $args, $defaults );
 
 		return wp_insert_post( $args );
+	}
+
+	/**
+	 * Runs on plugin activation.
+	 */
+	public function install() {
+		/**
+		 * Create a user, who will create saved carts.
+		 */
+		$user = username_exists('wcssc_user');
+
+		if( !$user ){
+			$password = wp_generate_password();
+			$user = wp_create_user( 'wcssc_user', $password );
+			update_option( 'wcssc_user', $user, true );
+		}else{
+			update_option( 'wcssc_user', $user, true );
+		}
+
+		/**
+		 * Generate rewrite rules. Saved carts endpoint creation.
+		 */
+		flush_rewrite_rules();
 	}
 }

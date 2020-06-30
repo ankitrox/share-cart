@@ -5,7 +5,7 @@ Tags: woocommerce, cart, share, social, facebook, google, twitter, e-commerce, s
 Requires at least: 5.0.0
 Tested up to: 5.4.2
 Requires PHP: 7.2
-Stable tag: 2.0.2
+Stable tag: 2.0.3
 License: GPLv2 or later (of course!)
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -115,6 +115,9 @@ Detailed documentation for localization process is [here](https://github.com/ank
 * First release.
 
 == Upgrade Notice ==
+
+= 2.0.3 =
+* Default user for `formed` carts.
 
 = 2.0.2 =
 * Fix: Captcha is now optional.
