@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import SavedCart from './SavedCart';
-import { ReactComponent as Loader } from '../../media/loader.svg'
+import Loader from '../../media/loader.svg'
 
 const { __ } = window.wp.i18n;
 

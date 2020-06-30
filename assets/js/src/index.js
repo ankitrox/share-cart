@@ -1,14 +1,13 @@
 import React from 'react';
 import { render } from 'react-dom'
-import 'bootstrap/dist/css/bootstrap.css';
 import ShareButton from './components/Containers/ShareButton';
 import SavedCarts from './components/SavedCarts';
 import domready from '@wordpress/dom-ready';
 import rootReducer from './store/reducers';
-import Style from './App.css';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux'
 import thunkMiddleware from 'redux-thunk'
+import './App.css'
 
 const store = createStore(
   rootReducer,
