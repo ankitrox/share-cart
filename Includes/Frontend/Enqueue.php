@@ -62,7 +62,7 @@ class Enqueue {
 	 * We will use asset-manifest.json to load the js/css files.
 	 */
 	public function load_scripts() {
-		if( is_cart() || is_account_page() ) {
+		if( is_cart() || is_account_page() || apply_filters( 'wcssc_enqueue_scripts', false ) ) {
 
 			$settings                            = [];
 			$settings['socials']                 = $this->util->plugin()->settings()->active_social_medias();
