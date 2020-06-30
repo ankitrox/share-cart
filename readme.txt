@@ -5,7 +5,7 @@ Tags: woocommerce, cart, share, social, facebook, google, twitter, e-commerce, s
 Requires at least: 5.0.0
 Tested up to: 5.4.2
 Requires PHP: 7.2
-Stable tag: 2.0.1
+Stable tag: 2.0.2
 License: GPLv2 or later (of course!)
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -116,9 +116,11 @@ Detailed documentation for localization process is [here](https://github.com/ank
 
 == Upgrade Notice ==
 
-= 2.0.1 =
-* Added support for localization.
-* Fix: Support to add bundled products.
+= 2.0.2 =
+* Fix: Captcha is now optional.
+* Fix: CSS only for modal.
+* Performance: Optimize build.
+* Performance: Load scripts and styles only on cart and account page.
 
 = 2.0.0 =
 * Complete revamp of the plugin.
