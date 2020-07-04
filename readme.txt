@@ -5,7 +5,7 @@ Tags: woocommerce, cart, share, social, facebook, google, twitter, e-commerce, s
 Requires at least: 5.0.0
 Tested up to: 5.4.2
 Requires PHP: 7.2
-Stable tag: 2.0.3
+Stable tag: 2.0.4
 License: GPLv2 or later (of course!)
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -125,10 +125,9 @@ Detailed documentation for localization process is [here](https://github.com/ank
 
 == Upgrade Notice ==
 
-= 2.0.3 =
+= 2.0.4 =
+* JSX issue fixes.
 * Default user for `formed` carts.
-
-= 2.0.2 =
 * Fix: Captcha is now optional.
 * Fix: CSS only for modal.
 * Performance: Optimize build.

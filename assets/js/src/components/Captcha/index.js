@@ -30,7 +30,7 @@ function Spinner() {
 
 function Captcha(props) {
   if( "" !== window.wcssc_settings.wcssc_captcha_key ) {
-    return <Tickbox props />
+    return <Tickbox {...props} />
   }else {
     return <Spinner />
   }

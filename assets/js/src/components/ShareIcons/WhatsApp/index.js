@@ -8,7 +8,7 @@ function WhatsAppIcon( { link } ) {
   return (
     <div>
       <a title={ __( 'Share cart on WhatsApp', 'wcssc' ) } target="_blank" href={ ( isMobile ? "whatsapp://send?text=" : "https://web.whatsapp.com/send?text=" ) + encodeURIComponent(link) }>
-        <i class="fab fa-whatsapp"></i>
+        <i className="fab fa-whatsapp"></i>
       </a>
     </div>
 );

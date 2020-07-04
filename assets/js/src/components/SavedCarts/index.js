@@ -32,7 +32,6 @@ export default function SavedCarts( props ) {
             res => {
                 setFetching(false);
                 if( res.status === 200 ) {
-                    console.log(res.data);
                     setCarts( res.data );
                     // reset the nonce.
                     window.wcssc_settings.nonce = res.headers['x-wp-nonce'];

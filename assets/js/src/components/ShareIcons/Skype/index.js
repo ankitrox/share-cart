@@ -7,7 +7,7 @@ function SkypeIcon( { link } ) {
   return (
     <div>
       <a title={ __('Share cart on Skype', 'wcssc') } target="_blank" href={"https://web.skype.com/share?url=" + encodeURIComponent(link) }>
-        <i class="fab fa-skype"></i>
+        <i className="fab fa-skype"></i>
       </a>
     </div>
 );
