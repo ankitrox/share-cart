@@ -37,7 +37,7 @@ export default function SaveForm ( props ) {
             <Form>
             <div className="wcssc-form-row">
               <label htmlFor="cartTitle"> { __('Cart Title', 'wcssc') } </label>
-              <Field name="cartTitle" type="text" autocomplete="off" onBlur={ props } />
+              <Field name="cartTitle" type="text" autoComplete="off" onBlur={ ( e ) => console.log( e ) } />
             </div>
 
             <div className="wcssc-form-row">

@@ -7,7 +7,7 @@ function EmailIcon( { onClick } ) {
   return (
     <div>
       <a title={ __('Email this cart', 'wcssc') } href="#" onClick={ onClick } title="Email">
-        <i class="fas fa-envelope"></i>
+        <i className="fas fa-envelope"></i>
       </a>
     </div>
 );

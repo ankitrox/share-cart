@@ -37,12 +37,12 @@ export default function EmailForm ( props ) {
       <Form>
         <div className="wcssc-form-row">
         <label htmlFor="emailTo"> { __('Email address', 'wcssc') } </label>
-        <Field name="emailTo" type="text" autocomplete="off" onBlur={ props } placeholder={ __('Email to whom you want to send cart', 'wcssc') } />
+        <Field name="emailTo" type="text" autoComplete="off" onBlur={ ( e ) => console.log( e ) } placeholder={ __('Email to whom you want to send cart', 'wcssc') } />
         </div>
 
         <div className="wcssc-form-row">
           <label htmlFor="emailTitle"> { __('Email Title', 'wcssc') } </label>
-          <Field name="emailTitle" type="text" autocomplete="off" onBlur={ props } placeholder={ __( 'Email subject', 'wcssc' ) } />
+          <Field name="emailTitle" type="text" autoComplete="off" onBlur={ ( e ) => console.log( e ) } placeholder={ __( 'Email subject', 'wcssc' ) } />
         </div>
 
         <div className="wcssc-form-row">

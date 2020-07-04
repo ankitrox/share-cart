@@ -9,7 +9,6 @@ const mapDispatchToProps = (dispatch) => ({
     dispatch( setFrame( 'CLUSTER' ) );
   },
   onSubmit: ( values, formikBag ) => {
-    console.log(formikBag);
     dispatch( savecart( values, formikBag ) );
   }
 })
