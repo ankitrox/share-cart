@@ -91,6 +91,7 @@ class SaveShareCart {
 		add_action( 'init', [ $this, 'register_post_type' ] );
 		add_action( 'init', [ $this, 'register_post_statuses' ] );
 		add_action( 'init', [ $this, 'load_textdomain' ] );
+		add_action( 'woocommerce_init', [ $this, 'mock_frontend' ] );
 	}
 
 	/**
@@ -107,6 +108,27 @@ class SaveShareCart {
 	 */
 	public function settings() {
 		return $this->settings;
+	}
+
+	/**
+	 * WooCommerce uses WC()->is_request('frontend') check
+	 * to determine if it is required to load the necessary
+	 * classes and actions to setup the cart.
+	 *
+	 * Issue: https://wordpress.org/support/topic/link-is-empty/
+	 */
+	public function mock_frontend() {
+		if ( empty( $_SERVER['REQUEST_URI'] ) ) {
+			return;
+		}
+
+		$rest_prefix         = trailingslashit( rest_get_url_prefix() );
+		$is_rest_api_request = ( false !== strpos( $_SERVER['REQUEST_URI'], $rest_prefix . 'wcssc' ) );
+
+		if ( $is_rest_api_request ) {
+			WC()->frontend_includes();
+			wc_load_cart();
+		}
 	}
 
 	/**

@@ -5,7 +5,7 @@ Tags: woocommerce, cart, share, social, facebook, google, twitter, e-commerce, s
 Requires at least: 5.0.0
 Tested up to: 5.4.2
 Requires PHP: 7.2
-Stable tag: 2.0.4
+Stable tag: 2.0.5
 License: GPLv2 or later (of course!)
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -71,6 +71,14 @@ Detailed documentation for localization process is [here](https://github.com/ank
 
 == Changelog ==
 
+= 2.0.4 =
+* JSX issue fixes.
+* Default user for `formed` carts.
+* Fix: Captcha is now optional.
+* Fix: CSS only for modal.
+* Performance: Optimize build.
+* Performance: Load scripts and styles only on cart and account page.
+
 = 2.0.3 =
 * Default user for `formed` carts.
 
@@ -125,15 +133,5 @@ Detailed documentation for localization process is [here](https://github.com/ank
 
 == Upgrade Notice ==
 
-= 2.0.4 =
-* JSX issue fixes.
-* Default user for `formed` carts.
-* Fix: Captcha is now optional.
-* Fix: CSS only for modal.
-* Performance: Optimize build.
-* Performance: Load scripts and styles only on cart and account page.
-
-= 2.0.0 =
-* Complete revamp of the plugin.
-* React.JS based components, more fast and intuitive user interface.
-* WP REST API for data communication.
+= 2.0.5 =
+* Fix: After creating the shared cart, link showing no cart.
