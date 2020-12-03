@@ -1,0 +1,88 @@
+{
+   "domain": "messages",
+   "locale_data": {
+      "messages": {
+         "": {
+            "domain": "messages"
+         },
+         "We love humans!": [
+            "¡Amamos a los humanos!"
+         ],
+         "Cart link copied to clipboard": [
+            "Vínculo del carrito copiado al portapapeles"
+         ],
+         "Email Cart": [
+            "Carrito de correo electrónico"
+         ],
+         "Must be 50 characters or less": [
+            "Debe tener 50 caracteres o menos"
+         ],
+         "Required": [
+            "Requerido"
+         ],
+         "Email address": [
+            "Dirección de correo electrónico"
+         ],
+         "Email to whom you want to send cart": [
+            "Correo electrónico al que desea enviar el carrito"
+         ],
+         "Email Title": [
+            "Título del correo electrónico"
+         ],
+         "Email subject": [
+            "Asunto"
+         ],
+         "Back": [
+            "Volver"
+         ],
+         "Submit": [
+            "Enviar"
+         ],
+         "Cart Name": [
+            "Nombre del carrito"
+         ],
+         "Remove Cart": [
+            "Eliminar carrito"
+         ],
+         "There are no saved carts to display.": [
+            "No hay carritos guardados para mostrar."
+         ],
+         "Are you sure you want to delete this?": [
+            "¿Estás seguro de que quieres eliminar esto?"
+         ],
+         "Cancel": [
+            "Cancelar"
+         ],
+         "Save Cart": [
+            "Guardar carrito"
+         ],
+         "Cart Title": [
+            "Título del carrito"
+         ],
+         "Cart Description": [
+            "Descripción del carrito"
+         ],
+         "Copy cart link to clipboard": [
+            "Copiar el enlace del carrito"
+         ],
+         "Email this cart": [
+            "Envíe este carrito por correo electrónico"
+         ],
+         "Share on Facebook": [
+            "Compartir en Facebook"
+         ],
+         "Save the cart": [
+            "Guardar el carrito"
+         ],
+         "Share cart on Skype": [
+            "Compartir carrito en Skype"
+         ],
+         "Share cart on Twitter": [
+            "Compartir carrito en Twitter"
+         ],
+         "Share cart on WhatsApp": [
+            "Compartir carrito en WhatsApp"
+         ]
+      }
+   }
+}
