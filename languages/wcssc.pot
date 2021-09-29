@@ -364,7 +364,7 @@ msgid "Carts list"
 msgstr ""
 
 #: Includes/Utility/Utility.php:92
-msgid "Shared cart - "
+msgid "Shared cart - %s"
 msgstr ""
 
 #: templates/single-saved-cart.php:23
