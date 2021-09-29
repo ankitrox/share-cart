@@ -96,7 +96,7 @@ class Utility {
 		$data      = WC()->cart->cart_contents;
 		$cart_hash = $_COOKIE['woocommerce_cart_hash'];
 		$defaults  = [
-			'post_title'  => __( 'Shared cart - ' . $cart_hash, 'wcssc' ),
+			'post_title'  => sprintf(__('Shared cart - %s', 'wcssc'), $cart_hash),
 			'post_name'   => $cart_hash,
 			'meta_input'  => [
 				'wcssc_cart_data' => $data,
