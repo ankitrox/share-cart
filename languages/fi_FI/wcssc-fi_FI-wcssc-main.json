@@ -1,0 +1,88 @@
+{
+   "domain": "messages",
+   "locale_data": {
+      "messages": {
+         "": {
+            "domain": "messages"
+         },
+         "We love humans!": [
+            "Me rakastamme ihmisiä!"
+         ],
+         "Cart link copied to clipboard": [
+            "Ostoskorin linkki kopioitu leikepöydälle"
+         ],
+         "Email Cart": [
+            "Lähetä ostoskori sähköpostilla"
+         ],
+         "Must be 50 characters or less": [
+            "Enintään 50 merkkiä"
+         ],
+         "Required": [
+            "Vaadittu"
+         ],
+         "Email address": [
+            "Sähköpostiosoite"
+         ],
+         "Email to whom you want to send cart": [
+            "Sähköposti, jolle haluat lähettää ostoskorin"
+         ],
+         "Email Title": [
+            "Sähköpostin otsikko"
+         ],
+         "Email subject": [
+            "Sähköpostin aihe"
+         ],
+         "Back": [
+            "Takaisin"
+         ],
+         "Submit": [
+			 "Lähetä"
+         ],
+         "Cart Name": [
+            "Ostoskorin nimi"
+         ],
+         "Remove Cart": [
+            "Poista ostoskori"
+         ],
+         "There are no saved carts to display.": [
+            "Näytettäviä tallennettuja ostoskoreja ei ole."
+         ],
+         "Are you sure you want to delete this?": [
+            "Haluatko varmasti poistaa tämän?"
+         ],
+         "Cancel": [
+            "Keskeytä"
+         ],
+         "Save Cart": [
+            "Tallenna ostoskori"
+         ],
+         "Cart Title": [
+            "Ostoskorin otsikko"
+         ],
+         "Cart Description": [
+            "Ostoskorin kuvaus"
+         ],
+         "Copy cart link to clipboard": [
+            "Kopioi ostoskorin linkki leikepöydälle"
+         ],
+         "Email this cart": [
+            "Lähetä tämä ostoskori sähköpostilla"
+         ],
+         "Share on Facebook": [
+            "Jaa ostoskori Facebookissa"
+         ],
+         "Save the cart": [
+            "Tallenna ostoskori"
+         ],
+         "Share cart on Skype": [
+            "Jaa ostoskori Skypessä"
+         ],
+         "Share cart on Twitter": [
+            "Jaa ostoskori Twitterissä"
+         ],
+         "Share cart on WhatsApp": [
+            "Jaa ostoskori WhatsAppissa"
+         ]
+      }
+   }
+}
