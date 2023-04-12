@@ -1,0 +1,88 @@
+{
+   "domain": "messages",
+   "locale_data": {
+      "messages": {
+         "": {
+            "domain": "messages"
+         },
+         "We love humans!": [
+            "Wir lieben Menschen!"
+         ],
+         "Cart link copied to clipboard": [
+            "Warenkorb-Link in Zwischenablage kopiert"
+         ],
+         "Email Cart": [
+            "Warenkorb per E-Mail versenden"
+         ],
+         "Must be 50 characters or less": [
+            "Muss 50 Zeichen oder weniger sein"
+         ],
+         "Required": [
+            "Erforderlich"
+         ],
+         "Email address": [
+            "E-Mail-Adresse"
+         ],
+         "Email to whom you want to send cart": [
+            "E-Mail, an die Sie den Warenkorb senden möchten"
+         ],
+         "Email Title": [
+            "E-Mail-Titel"
+         ],
+         "Email subject": [
+            "E-Mail-Betreff"
+         ],
+         "Back": [
+            "Zurück"
+         ],
+         "Submit": [
+            "Absenden"
+         ],
+         "Cart Name": [
+            "Warenkorb-Name"
+         ],
+         "Remove Cart": [
+            "Warenkorb entfernen"
+         ],
+         "There are no saved carts to display.": [
+            "Es gibt keine gespeicherten Warenkörbe zum Anzeigen."
+         ],
+         "Are you sure you want to delete this?": [
+            "Sind Sie sicher, dass Sie dies löschen möchten?"
+         ],
+         "Cancel": [
+            "Abbrechen"
+         ],
+         "Save Cart": [
+            "Warenkorb speichern"
+         ],
+         "Cart Title": [
+            "Warenkorb-Titel"
+         ],
+         "Cart Description": [
+            "Warenkorb-Beschreibung"
+         ],
+         "Copy cart link to clipboard": [
+            "Warenkorb-Link in Zwischenablage kopieren"
+         ],
+         "Email this cart": [
+            "Diesen Warenkorb per E-Mail versenden"
+         ],
+         "Share on Facebook": [
+            "Auf Facebook teilen"
+         ],
+         "Save the cart": [
+            "Den Warenkorb speichern"
+         ],
+         "Share cart on Skype": [
+            "Warenkorb auf Skype teilen"
+         ],
+         "Share cart on Twitter": [
+            "Warenkorb auf Twitter teilen"
+         ],
+         "Share cart on WhatsApp": [
+            "Warenkorb auf WhatsApp teilen"
+         ]
+      }
+   }
+}
