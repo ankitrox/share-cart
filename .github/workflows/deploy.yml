@@ -16,7 +16,7 @@ jobs:
         echo 'export NVM_DIR=$HOME/.nvm' >> $BASH_ENV
         echo 'source $NVM_DIR/nvm.sh' >> $BASH_ENV
         mv .nvmrc_temp .nvmrc
-        nvm install
+        nvm install 16.8.0
         nvm use
         nvm --version
         cd assets/js/ && npm install && npm run build && cd ../../
