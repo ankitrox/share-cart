@@ -31,3 +31,18 @@ phpunit.xml
 
 # Do not include backup PHP files
 *.php.bak
+
+# git files
+.git
+.gitattributes
+.gitignore
+.nvmrc
+
+composer.json
+composer.lock
+package.json
+package-lock.json
+phpcs.xml.dist
+README.md
+.wordpress-org
+.distignore
