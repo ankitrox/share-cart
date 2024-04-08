@@ -9,9 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - name: Build # Remove or modify this step as needed
+    - uses: actions/setup-node@v4
+      name: 'Use node 16 and build assets'
       with:
-        node-version: 16.13.0
+        node-version: 16.x
       run: |
         cd assets/js/ && npm install && npm run build && cd ../../
     - name: WordPress Plugin Deploy
