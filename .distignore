@@ -23,7 +23,7 @@ wp-cli.local.yml
 .vscode/
 
 # Composer
-!vendor
+!/vendor/
 
 # Files allowed to be overridden with a local version
 phpcs.xml
