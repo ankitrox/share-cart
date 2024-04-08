@@ -5,7 +5,7 @@ Tags: woocommerce, cart, share, social, facebook, google, twitter, e-commerce, s
 Requires at least: 5.2.0
 Tested up to: 6.4.0
 Requires PHP: 7.2
-Stable tag: 2.0.7
+Stable tag: 2.0.8
 License: GPLv2 or later (of course!)
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -70,6 +70,11 @@ Detailed documentation for localization process is [here](https://github.com/ank
 5. Share cart pop-up.
 
 == Changelog ==
+
+= 2.0.8 =
+
+* Fix: fatal error vendor not found.
+
 
 = 2.0.7 =
 
