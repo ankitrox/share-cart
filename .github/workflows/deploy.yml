@@ -13,7 +13,7 @@ jobs:
       name: 'Use node 16 and build assets'
       with:
         node-version: 16.x
-      run: |
+    - run: |
         cd assets/js/ && npm install && npm run build && cd ../../
     - name: WordPress Plugin Deploy
       uses: 10up/action-wordpress-plugin-deploy@stable
