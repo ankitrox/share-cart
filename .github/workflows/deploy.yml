@@ -11,6 +11,14 @@ jobs:
     - uses: actions/checkout@master
     - name: Build # Remove or modify this step as needed
       run: |
+        mv .nvmrc .nvmrc_temp
+        curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+        echo 'export NVM_DIR=$HOME/.nvm' >> $BASH_ENV
+        echo 'source $NVM_DIR/nvm.sh' >> $BASH_ENV
+        mv .nvmrc_temp .nvmrc
+        nvm install
+        nvm use
+        nvm --version
         cd assets/js/ && npm install && npm run build && cd ../../
     - name: WordPress Plugin Deploy
       uses: 10up/action-wordpress-plugin-deploy@stable
