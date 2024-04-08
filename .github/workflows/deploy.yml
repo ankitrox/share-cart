@@ -10,10 +10,9 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Build # Remove or modify this step as needed
+      with:
+        node-version: 16.13.0
       run: |
-        nvm install 16.13.0
-        nvm use
-        nvm --version
         cd assets/js/ && npm install && npm run build && cd ../../
     - name: WordPress Plugin Deploy
       uses: 10up/action-wordpress-plugin-deploy@stable
