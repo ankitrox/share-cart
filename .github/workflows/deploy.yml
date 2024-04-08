@@ -14,7 +14,7 @@ jobs:
       with:
         node-version: 16.x
     - run: |
-        composer install && cd assets/js/ && npm install && npm run build && cd ../../
+        composer install --no-dev --no-interaction && cd assets/js/ && npm install && npm run build && cd ../../
     - name: WordPress Plugin Deploy
       uses: 10up/action-wordpress-plugin-deploy@stable
       env:
