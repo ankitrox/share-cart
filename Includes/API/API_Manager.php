@@ -10,11 +10,10 @@
 
 namespace Ankit\WCSSC\API;
 
-use Ankit\WCSSC\Endpoint\EmailCart;
-use Ankit\WCSSC\Endpoint\GetLink;
-use Ankit\WCSSC\Endpoint\SaveCart;
+use Ankit\WCSSC\API\Endpoints\EmailCart;
+use Ankit\WCSSC\API\Endpoints\GetLink;
+use Ankit\WCSSC\API\Endpoints\SaveCart;
 use Ankit\WCSSC\Utility\Utility;
-use WP_REST_Request;
 
 /**
  * Class API_Manager

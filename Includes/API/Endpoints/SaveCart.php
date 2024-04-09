@@ -3,7 +3,7 @@
  * Save cart endpoint class.
  */
 
-namespace Ankit\WCSSC\Endpoint;
+namespace Ankit\WCSSC\API\Endpoints;
 
 use Ankit\WCSSC\Interfaces\Endpoint;
 use WP_REST_Request;

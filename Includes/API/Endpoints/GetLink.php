@@ -3,7 +3,7 @@
  * Get cart link endpoint.
  */
 
-namespace Ankit\WCSSC\Endpoint;
+namespace Ankit\WCSSC\API\Endpoints;
 
 defined( 'ABSPATH' ) || exit;
 

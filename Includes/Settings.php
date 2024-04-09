@@ -10,9 +10,9 @@
 
 namespace Ankit\WCSSC;
 
-use Ankit\WCSSC\Section\Email;
-use Ankit\WCSSC\Section\General;
-use Ankit\WCSSC\Section\SaveCart;
+use Ankit\WCSSC\Admin\Sections\Email;
+use Ankit\WCSSC\Admin\Sections\General;
+use Ankit\WCSSC\Admin\Sections\SaveCart;
 
 class Settings {
 	/**

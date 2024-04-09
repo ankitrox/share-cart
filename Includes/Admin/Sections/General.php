@@ -3,7 +3,7 @@
  * General Settings Section.
  */
 
-namespace Ankit\WCSSC\Section;
+namespace Ankit\WCSSC\Admin\Sections;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	wp_die( __( 'This operation is not allowed', 'wcssc' ) );

@@ -11,9 +11,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	wp_die( __( 'This operation is not allowed', 'wcssc' ) );
 }
 
-use Ankit\WCSSC\Section\Email;
-use Ankit\WCSSC\Section\General;
-use Ankit\WCSSC\Section\SaveCart;
+use Ankit\WCSSC\Admin\Sections\Email;
+use Ankit\WCSSC\Admin\Sections\General;
+use Ankit\WCSSC\Admin\Sections\SaveCart;
 use WC_Settings_Page;
 use Ankit\WCSSC\Interfaces\SettingsSubSection;
 
