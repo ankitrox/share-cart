@@ -47,3 +47,6 @@ phpcs.xml.dist
 README.md
 .wordpress-org
 .distignore
+assets/js/src/
+webpack.config.js
+.babelrc
